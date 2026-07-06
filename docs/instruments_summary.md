@@ -14,9 +14,15 @@ It covered:
 - evidence;
 - responsibilities;
 - delays;
-- validation rules.
+- validation rules;
+- basic interpretation of business rules in public works monitoring.
 
 Maximum score: 44 points.
+
+Corrected average:
+
+- 14.00/44
+- 31.82%
 
 ## K1 post-tests
 
@@ -38,6 +44,41 @@ Scoring rubric:
 Each K1 version had a maximum of 22 points.
 
 Each participant completed two K1 tests, for a total maximum of 44 points.
+
+Corrected average:
+
+- 41.13/44
+- 93.47%
+
+## Measurement Bulletin K1
+
+The Measurement Bulletin version evaluated whether participants understood:
+
+- the purpose of the Measurement Bulletin;
+- the distinction between measurement and planning;
+- the relation with the Physical-Financial Schedule;
+- the relation with the Analytical Budget Spreadsheet;
+- contract linkage;
+- measured quantities;
+- evidence;
+- validations;
+- glosa;
+- ambiguities requiring specialist validation.
+
+## Construction Monitoring Report K1
+
+The Construction Monitoring Report version evaluated whether participants understood:
+
+- the purpose of the report;
+- the distinction between monitoring report, Measurement Bulletin, and Daily Construction Report;
+- managerial and technical consolidation;
+- supporting documents;
+- planned-versus-executed comparison;
+- delays;
+- risks;
+- pending issues;
+- evidence;
+- ambiguities requiring specialist validation.
 
 ## Confidence item
 
