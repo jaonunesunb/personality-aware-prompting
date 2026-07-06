@@ -1,0 +1,150 @@
+A seguir está um artefato estruturado para o **formulário de Relatório de Acompanhamento de Obra**, considerando o contexto de obras públicas executadas de forma indireta.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Relatório de Acompanhamento de Obra** tem como objetivo **registrar, consolidar e comunicar a situação atual da obra** sob responsabilidade de uma empresa contratada, permitindo que o órgão público acompanhe:
+
+- o andamento físico da obra;
+- o cumprimento do cronograma;
+- pendências e riscos identificados;
+- ocorrências relevantes;
+- evidências de execução;
+- necessidade de ações corretivas;
+- situação geral para tomada de decisão.
+
+### Conceito do domínio
+- **Obra executada de forma indireta**: a execução é feita por uma empresa contratada, enquanto o órgão público fiscaliza e acompanha.
+- **Acompanhamento**: atividade de monitoramento contínuo da execução, com registro de fatos, desvios e providências.
+- **Consolidação**: o relatório reúne informações de outros documentos, como medições, diário de obra e cronograma.
+
+---
+
+## 2. Entidades principais
+
+As principais entidades envolvidas no formulário são:
+
+### 2.1 Relatório de Acompanhamento de Obra
+Entidade central do formulário. Representa um registro periódico da situação da obra.
+
+### 2.2 Obra
+Cadastro principal da intervenção acompanhada. Contém identificação da obra, local, objeto e vínculo com contrato.
+
+### 2.3 Contrato
+Documento que formaliza a contratação da execução da obra.
+
+### 2.4 Cronograma Físico-Financeiro
+Documento que define o planejamento da execução ao longo do tempo, em termos físicos e financeiros.
+
+### 2.5 Boletim de Medição
+Documento que registra os serviços executados em determinado período e serve de base para validação e pagamento.
+
+### 2.6 Relatório Diário de Obras
+Registro cotidiano de atividades, ocorrências, condições climáticas, equipes, equipamentos e evidências.
+
+### 2.7 Evidência
+Arquivo, foto, vídeo, documento ou observação que comprove a situação informada.
+
+### 2.8 Pendência
+Item não concluído, irregularidade, restrição ou providência pendente.
+
+### 2.9 Risco
+Evento ou condição que pode impactar prazo, custo, qualidade ou continuidade da obra.
+
+### 2.10 Ação corretiva / providência
+Medida proposta ou adotada para tratar pendências, riscos ou desvios.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário, separados por grupos.
+
+### 3.1 Identificação do relatório
+- **Número do relatório**
+- **Data de emissão**
+- **Período de referência**  
+  Ex.: semanal, quinzenal, mensal.
+- **Data inicial do período**
+- **Data final do período**
+- **Status do relatório**  
+  Ex.: rascunho, em revisão, validado, rejeitado, encerrado.
+- **Responsável pelo preenchimento**
+- **Unidade/órgão responsável**
+- **Fiscal ou gestor responsável pela validação**
+
+### 3.2 Identificação da obra
+- **Código da obra**
+- **Nome da obra**
+- **Objeto da obra**
+- **Local da obra**
+- **Município/UF**
+- **Contratada**
+- **Número do contrato**
+- **Data de início contratual**
+- **Prazo contratual**
+- **Data prevista de término**
+- **Situação atual da obra**  
+  Ex.: não iniciada, em execução, paralisada, concluída, recebida provisoriamente, recebida definitivamente.
+
+### 3.3 Situação física da obra
+- **Percentual físico planejado**
+- **Percentual físico executado**
+- **Percentual de avanço no período**
+- **Etapas/serviços executados no período**
+- **Etapas/serviços em andamento**
+- **Etapas/serviços não iniciados**
+- **Etapas críticas**
+- **Desvios identificados em relação ao cronograma**
+
+### 3.4 Situação financeira
+- **Valor contratual**
+- **Valor medido no período**
+- **Valor acumulado medido**
+- **Valor pago no período**  
+  Se aplicável.
+- **Valor acumulado pago**
+- **Saldo contratual**
+- **Desvios financeiros relevantes**
+
+### 3.5 Cronograma e prazo
+- **Prazo contratual vigente**
+- **Prazo decorrido**
+- **Prazo restante**
+- **Atraso acumulado**
+- **Previsão atualizada de término**
+- **Justificativa para atraso, se houver**
+
+### 3.6 Ocorrências e registros do período
+- **Ocorrências relevantes**
+- **Interferências externas**
+- **Paralisações**
+- **Problemas de projeto**
+- **Problemas de fornecimento**
+- **Problemas climáticos**
+- **Problemas de acesso ao local**
+- **Problemas de segurança**
+- **Outros eventos relevantes**
+
+### 3.7 Pendências
+- **Descrição da pendência**
+- **Responsável pela tratativa**
+- **Prazo para solução**
+- **Prioridade**
+- **Status da pendência**
+- **Impacto estimado**
+
+### 3.8 Riscos
+- **Descrição do risco**
+- **Categoria do risco**  
+  Ex.: prazo, custo, qualidade, segurança, ambiental, contratual.
+- **Probabilidade**
+- **Impacto**
+- **Nível do risco**
+- **Plano de mitigação**
+- **Responsável pela ação**
+
+### 3.9 Evidências
+- **Tipo de evidência**
+-

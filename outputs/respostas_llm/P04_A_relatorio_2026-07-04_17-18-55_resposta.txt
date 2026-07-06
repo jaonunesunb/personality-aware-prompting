@@ -1,0 +1,187 @@
+A seguir está um artefato estruturado para o **formulário de Relatório de Acompanhamento de Obra**, considerando o domínio de obras públicas executadas de forma indireta.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Relatório de Acompanhamento de Obra** tem como objetivo **registrar, consolidar e analisar a situação atual da obra** sob responsabilidade de uma empresa contratada, permitindo que o órgão público acompanhe:
+
+- o andamento físico da obra;
+- o cumprimento do cronograma;
+- pendências e impedimentos;
+- riscos e ocorrências relevantes;
+- evidências de execução;
+- necessidade de providências;
+- situação geral para tomada de decisão.
+
+### Conceito importante
+Esse relatório **não substitui** documentos operacionais como o **Boletim de Medição** ou o **Relatório Diário de Obras**. Ele funciona como um **documento consolidado de acompanhamento gerencial e técnico**.
+
+---
+
+## 2. Entidades principais
+
+As principais entidades envolvidas no formulário são:
+
+### 2.1 Obra
+Representa o empreendimento público acompanhado.
+
+**Atributos típicos:**
+- identificação da obra;
+- objeto;
+- local;
+- contratada;
+- prazo contratual;
+- valor contratado;
+- status da obra.
+
+### 2.2 Contrato
+Documento que formaliza a execução da obra pela empresa contratada.
+
+**Atributos típicos:**
+- número do contrato;
+- vigência;
+- valor;
+- objeto;
+- partes envolvidas;
+- aditivos, se existirem.
+
+### 2.3 Relatório de Acompanhamento de Obra
+Documento principal do formulário.
+
+**Atributos típicos:**
+- período de referência;
+- data de emissão;
+- responsável pelo preenchimento;
+- situação consolidada;
+- observações;
+- anexos e evidências.
+
+### 2.4 Medições
+Conjunto de boletins de medição vinculados à obra.
+
+**Função no domínio:**
+- indicar o que foi executado e validado em determinado período;
+- apoiar análise de avanço físico e financeiro.
+
+### 2.5 Relatórios Diários de Obras
+Registros cotidianos da execução.
+
+**Função no domínio:**
+- fornecer evidências e ocorrências diárias;
+- subsidiar o acompanhamento consolidado.
+
+### 2.6 Cronograma Físico-Financeiro
+Planejamento da obra ao longo do tempo.
+
+**Função no domínio:**
+- comparar previsto x realizado;
+- identificar atrasos e desvios.
+
+### 2.7 Pendências / Ocorrências / Riscos
+Itens que afetam a execução.
+
+**Função no domínio:**
+- registrar problemas, impedimentos, riscos e providências.
+
+### 2.8 Evidências
+Arquivos ou registros que comprovam a situação informada.
+
+**Exemplos:**
+- fotos;
+- documentos;
+- relatórios;
+- registros de visita técnica.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário, separados por categoria.
+
+### 3.1 Identificação do relatório
+- Número do relatório
+- Obra vinculada
+- Contrato vinculado
+- Período de referência inicial
+- Período de referência final
+- Data de emissão
+- Responsável pelo preenchimento
+- Unidade/órgão responsável
+- Status do relatório  
+  - Ex.: rascunho, em análise, validado, devolvido, encerrado
+
+### 3.2 Dados da obra
+- Nome da obra
+- Objeto da obra
+- Localização
+- Empresa contratada
+- Fiscal responsável
+- Gestor responsável
+- Prazo contratual
+- Data de início
+- Data prevista de término
+- Data real de término, se aplicável
+- Valor contratado
+
+### 3.3 Situação de andamento
+- Percentual físico previsto no período
+- Percentual físico realizado no período
+- Percentual físico acumulado
+- Percentual financeiro previsto no período
+- Percentual financeiro realizado no período
+- Situação geral da obra  
+  - Ex.: dentro do prazo, em atraso, paralisada, retomada, concluída
+- Comparativo com cronograma  
+  - Ex.: adiantado, conforme, atrasado
+
+### 3.4 Execução e progresso
+- Serviços executados no período
+- Serviços em execução
+- Serviços concluídos
+- Serviços não iniciados
+- Principais frentes de trabalho
+- Etapas críticas
+- Evolução desde o último relatório
+
+### 3.5 Pendências e impedimentos
+- Pendências identificadas
+- Impedimentos à execução
+- Responsável pela pendência
+- Prazo para solução
+- Impacto no cronograma
+- Impacto no custo
+- Status da pendência  
+  - aberta, em tratamento, resolvida, vencida
+
+### 3.6 Riscos e alertas
+- Riscos identificados
+- Nível de criticidade
+- Probabilidade
+- Impacto
+- Medidas preventivas
+- Medidas corretivas
+- Responsável pela ação
+
+### 3.7 Evidências e anexos
+- Fotos
+- Relatórios diários relacionados
+- Boletins de medição relacionados
+- Documentos complementares
+- Observações sobre as evidências
+
+### 3.8 Conclusão e encaminhamentos
+- Síntese da situação da obra
+- Recomendações
+- Providências solicitadas
+- Encaminhamento para validação
+- Parecer do responsável, se aplicável
+
+---
+
+## 4. Regras de negócio
+
+### 4.1 Regra de vinculação obrigatória
+O relatório deve estar vinculado a **uma única obra** e a **um contrato principal**.
+
+**Motivo:**

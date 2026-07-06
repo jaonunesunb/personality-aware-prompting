@@ -1,0 +1,190 @@
+A seguir está um artefato de requisitos para o **formulário de Relatório de Acompanhamento de Obra**, considerando o contexto de **obras públicas executadas de forma indireta**.
+
+---
+
+## 1. Objetivo do formulário
+
+O formulário de **Relatório de Acompanhamento de Obra** tem como objetivo **registrar, consolidar e acompanhar a situação atual da obra** sob responsabilidade de uma empresa contratada, permitindo ao órgão público:
+
+- monitorar o andamento físico e financeiro da obra;
+- registrar pendências, riscos, atrasos e ocorrências relevantes;
+- consolidar informações vindas de outros documentos de obra;
+- apoiar decisões de fiscalização, validação e gestão contratual;
+- manter histórico formal do acompanhamento da execução.
+
+### Conceito do domínio
+- **Obra executada de forma indireta**: a execução é feita por uma empresa contratada, enquanto o órgão público atua como fiscalizador e acompanhador.
+- **Acompanhamento de obra**: atividade de controle gerencial e técnico sobre o progresso da obra, com foco em prazo, execução, qualidade, evidências e conformidade.
+
+---
+
+## 2. Entidades principais
+
+As principais entidades envolvidas no formulário são:
+
+### 2.1 Obra
+Representa o empreendimento público em execução.
+
+**Atributos típicos:**
+- identificação da obra;
+- nome/descrição;
+- local;
+- órgão responsável;
+- empresa contratada;
+- prazo contratual;
+- valor contratual;
+- status geral.
+
+### 2.2 Contrato
+Documento que formaliza a contratação da empresa executora.
+
+**Atributos típicos:**
+- número do contrato;
+- objeto;
+- vigência;
+- valor;
+- partes envolvidas;
+- condições gerais.
+
+### 2.3 Relatório de Acompanhamento de Obra
+Documento principal do formulário.
+
+**Atributos típicos:**
+- período de referência;
+- data de emissão;
+- responsável pelo preenchimento;
+- situação geral da obra;
+- resumo executivo;
+- pendências;
+- riscos;
+- atrasos;
+- observações;
+- anexos/evidências.
+
+### 2.4 Medição
+Registro dos serviços executados e conferidos em um período.
+
+**Atributos típicos:**
+- período medido;
+- itens medidos;
+- quantidades;
+- valores;
+- status de validação.
+
+### 2.5 Relatório Diário de Obras
+Registro cotidiano das atividades e ocorrências.
+
+**Atributos típicos:**
+- data;
+- atividades executadas;
+- ocorrências;
+- condições climáticas;
+- evidências;
+- equipe presente.
+
+### 2.6 Cronograma Físico-Financeiro
+Planejamento da execução ao longo do tempo.
+
+**Atributos típicos:**
+- etapas;
+- marcos;
+- percentuais físicos;
+- desembolsos previstos;
+- datas planejadas.
+
+### 2.7 Planilha Orçamentária Analítica
+Detalhamento dos itens orçamentários da obra.
+
+**Atributos típicos:**
+- item;
+- descrição;
+- unidade;
+- quantidade;
+- custo unitário;
+- custo total.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário, separados por grupos.
+
+### 3.1 Identificação do relatório
+- Número do relatório
+- Obra vinculada
+- Contrato vinculado
+- Período de referência
+- Data de emissão
+- Responsável pelo preenchimento
+- Unidade/órgão responsável
+- Status do relatório
+
+### 3.2 Situação geral da obra
+- Situação atual da obra
+- Percentual físico executado
+- Percentual físico previsto
+- Percentual financeiro executado
+- Percentual financeiro previsto
+- Comparativo entre previsto e realizado
+- Resumo executivo da situação
+
+### 3.3 Andamento da execução
+- Etapas/serviços em execução
+- Etapas/serviços concluídos no período
+- Etapas/serviços não iniciados
+- Marcos atingidos
+- Desvios identificados
+
+### 3.4 Pendências e impedimentos
+- Pendências técnicas
+- Pendências administrativas
+- Impedimentos para execução
+- Responsável pela tratativa
+- Prazo para solução
+- Situação da pendência
+
+### 3.5 Riscos e alertas
+- Riscos identificados
+- Nível de criticidade
+- Impacto esperado
+- Probabilidade
+- Medidas mitigadoras
+- Responsável pelo acompanhamento
+
+### 3.6 Atrasos e desvios
+- Atraso em relação ao cronograma
+- Causa do atraso
+- Impacto no prazo final
+- Impacto no custo
+- Ação corretiva proposta
+
+### 3.7 Evidências e registros de apoio
+- Fotos
+- Documentos anexos
+- Links para relatórios diários
+- Links para medições
+- Observações de campo
+
+### 3.8 Validação e encerramento
+- Parecer do responsável
+- Aprovação/reprovação
+- Data da validação
+- Observações finais
+- Assinatura eletrônica ou identificação do validador
+
+---
+
+## 4. Regras de negócio
+
+### 4.1 Regra de vinculação obrigatória
+O relatório deve estar vinculado a:
+- uma obra existente;
+- um contrato válido ou em vigência;
+- um período de referência definido.
+
+**Motivo:** o relatório não deve existir de forma isolada, pois depende do contexto contratual e da obra acompanhada.
+
+### 4.2 Regra de unicidade por período
+Deve existir no máximo **um relatório de acompanhamento por obra e por período de referência**.
+
+**Exemplo:** não pode haver dois relatórios mensais para a mesma obra

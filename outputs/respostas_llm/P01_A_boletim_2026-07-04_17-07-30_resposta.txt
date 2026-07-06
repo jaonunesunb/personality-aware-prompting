@@ -1,0 +1,150 @@
+A seguir está um artefato de requisitos para o **formulário de Boletim de Medição** no contexto de acompanhamento de obras públicas executadas de forma indireta.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Boletim de Medição** tem como objetivo **registrar, conferir e validar os serviços executados em um período específico da obra**, com base no que foi efetivamente realizado pela empresa contratada.
+
+Ele serve para:
+
+- consolidar as quantidades executadas;
+- comparar o executado com o planejado;
+- apoiar a conferência técnica e administrativa;
+- subsidiar a aprovação para pagamento;
+- registrar pendências, glosas, divergências e observações da fiscalização.
+
+### Conceitos do domínio
+- **Medição**: apuração formal da quantidade de serviço executado em um período.
+- **Boletim**: documento consolidado que apresenta os itens medidos, seus quantitativos, valores e situação de validação.
+- **Glosa**: desconto ou rejeição parcial de um valor/quantidade por inconsistência, não conformidade ou ausência de comprovação.
+- **Fiscalização**: acompanhamento feito pelo órgão público para verificar execução, qualidade e aderência ao contrato.
+
+---
+
+## 2. Entidades principais
+
+### 2.1. Boletim de Medição
+Entidade principal do formulário. Representa um registro de medição de um período da obra.
+
+### 2.2. Obra
+Obra pública acompanhada pelo sistema. Identifica o empreendimento ao qual o boletim pertence.
+
+### 2.3. Contrato
+Documento que define objeto, prazo, valor e condições gerais. Base para validação do boletim.
+
+### 2.4. Item de medição
+Cada serviço ou composição orçamentária medido no boletim.
+
+### 2.5. Planilha Orçamentária Analítica
+Fonte de referência dos itens contratados, quantidades e preços.
+
+### 2.6. Cronograma Físico-Financeiro
+Base para comparação entre o planejado e o executado no período.
+
+### 2.7. Evidência
+Arquivo, foto, relatório ou outro registro que comprove a execução do serviço.
+
+### 2.8. Fiscal / Responsável técnico
+Usuário que confere, valida ou aprova a medição.
+
+### 2.9. Empresa contratada
+Responsável pela execução da obra e pela apresentação dos dados medidos.
+
+### 2.10. Período de medição
+Intervalo de datas ao qual o boletim se refere.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário.
+
+### 3.1. Identificação do boletim
+- Número do boletim
+- Obra vinculada
+- Contrato vinculado
+- Período de medição: data inicial e data final
+- Data de emissão
+- Situação do boletim: rascunho, em conferência, devolvido, aprovado, rejeitado, pago, cancelado
+- Responsável pelo preenchimento
+- Responsável pela conferência
+- Responsável pela aprovação
+
+### 3.2. Dados da obra/contrato
+- Nome da obra
+- Número do contrato
+- Contratada
+- Órgão contratante
+- Prazo contratual
+- Valor contratual
+- Percentual executado acumulado
+- Percentual previsto acumulado
+
+### 3.3. Dados da medição
+Para cada item medido:
+- Código do item
+- Descrição do serviço
+- Unidade de medida
+- Quantidade contratada
+- Quantidade acumulada anterior
+- Quantidade executada no período
+- Quantidade acumulada atual
+- Quantidade restante
+- Preço unitário
+- Valor do período
+- Valor acumulado
+- Percentual físico executado
+- Observações do item
+- Situação do item: medido, parcialmente medido, não medido, glosado, pendente
+
+### 3.4. Informações de conferência
+- Conformidade com a planilha orçamentária
+- Conformidade com o cronograma físico-financeiro
+- Divergências identificadas
+- Pendências de documentação
+- Necessidade de correção
+- Justificativa para glosa ou ajuste
+
+### 3.5. Evidências
+- Tipo de evidência
+- Descrição da evidência
+- Data da evidência
+- Arquivo anexado
+- Item relacionado
+- Autor da evidência
+
+### 3.6. Totais do boletim
+- Total bruto medido no período
+- Total glosado
+- Total líquido a pagar
+- Total acumulado da obra
+- Percentual físico acumulado
+- Percentual financeiro acumulado
+
+### 3.7. Assinaturas e aprovações
+- Nome e cargo do responsável técnico da contratada
+- Nome e cargo do fiscal do contrato
+- Nome e cargo do gestor do contrato
+- Data de conferência
+- Data de aprovação
+- Observações finais
+
+---
+
+## 4. Regras de negócio
+
+### 4.1. Vinculação obrigatória
+O boletim deve estar vinculado a:
+- uma única obra;
+- um único contrato;
+- um único período de medição.
+
+### 4.2. Base de medição
+Somente podem ser medidos itens que existam na **Planilha Orçamentária Analítica** do contrato, salvo se houver aditivo ou autorização formal de inclusão.
+
+### 4.3. Limite contratual
+A quantidade acumulada medida de cada item não pode ultrapassar a quantidade contratada, exceto quando houver alteração contratual formalizada.
+
+### 4.4. Compatibilidade com o cronograma
+A medição

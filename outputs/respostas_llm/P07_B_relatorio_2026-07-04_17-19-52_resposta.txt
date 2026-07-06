@@ -1,0 +1,199 @@
+## 1. Objetivo do formulário
+
+O formulário de **Relatório de Acompanhamento de Obra** tem como finalidade **registrar, consolidar e acompanhar a situação geral de uma obra pública executada de forma indireta**.
+
+Ele deve permitir que o órgão público:
+- registre o **estado atual da obra**;
+- consolide informações de **planejamento, execução, medições, evidências e ocorrências**;
+- identifique **atrasos, pendências, riscos e desvios**;
+- acompanhe a evolução da obra ao longo do tempo;
+- produza um histórico formal para apoio à gestão, fiscalização e tomada de decisão.
+
+### Conceito importante
+- **Execução indireta**: a obra é realizada por uma empresa contratada, enquanto o órgão público acompanha e valida o andamento.
+- **Acompanhamento**: não é apenas registro descritivo; envolve análise da situação da obra com base em documentos e evidências.
+
+---
+
+## 2. Entidades principais
+
+As entidades abaixo representam os elementos centrais do formulário e do domínio.
+
+### 2.1 Obra
+Representa o empreendimento público acompanhado.
+
+**Atributos típicos:**
+- identificação da obra;
+- objeto;
+- localização;
+- órgão responsável;
+- empresa contratada;
+- prazo contratual;
+- valor contratual;
+- status geral.
+
+### 2.2 Relatório de Acompanhamento de Obra
+Documento principal do formulário.
+
+**Atributos típicos:**
+- número do relatório;
+- período de referência;
+- data de emissão;
+- responsável pelo preenchimento;
+- situação consolidada da obra;
+- observações gerais.
+
+### 2.3 Medições
+Conjunto de informações sobre serviços executados e conferidos.
+
+**Atributos típicos:**
+- período medido;
+- percentual executado;
+- valor medido;
+- valor acumulado;
+- status de validação.
+
+### 2.4 Cronograma físico-financeiro
+Planejamento da obra ao longo do tempo.
+
+**Atributos típicos:**
+- etapas previstas;
+- marcos;
+- percentuais planejados;
+- valores planejados por período;
+- comparação entre planejado e realizado.
+
+### 2.5 Ocorrências / Pendências
+Eventos ou problemas que afetam a execução.
+
+**Atributos típicos:**
+- descrição da ocorrência;
+- data;
+- impacto;
+- responsável pela tratativa;
+- prazo de solução;
+- status.
+
+### 2.6 Evidências
+Registros que comprovam a situação informada.
+
+**Atributos típicos:**
+- fotos;
+- documentos anexos;
+- registros de visita;
+- observações técnicas.
+
+### 2.7 Riscos
+Situações que podem comprometer prazo, custo, qualidade ou continuidade.
+
+**Atributos típicos:**
+- descrição do risco;
+- probabilidade;
+- impacto;
+- nível de criticidade;
+- ação preventiva ou corretiva.
+
+### 2.8 Partes envolvidas
+Atores relacionados à obra.
+
+**Exemplos:**
+- órgão público;
+- fiscal da obra;
+- gestor do contrato;
+- empresa contratada;
+- responsável técnico.
+
+---
+
+## 3. Campos necessários
+
+A seguir, os campos recomendados para o formulário. A lista pode ser ajustada conforme o nível de detalhamento desejado.
+
+### 3.1 Identificação do relatório
+- número do relatório;
+- data de emissão;
+- período de referência inicial;
+- período de referência final;
+- status do relatório;
+- responsável pelo preenchimento;
+- unidade/órgão emissor.
+
+### 3.2 Identificação da obra
+- código da obra;
+- nome da obra;
+- objeto da obra;
+- local da obra;
+- município/UF;
+- empresa contratada;
+- número do contrato;
+- data de início contratual;
+- prazo contratual;
+- valor contratual.
+
+### 3.3 Situação geral da obra
+- percentual físico executado;
+- percentual financeiro executado;
+- situação atual da obra;
+- comparação com o cronograma;
+- classificação do andamento;
+- justificativa da situação informada.
+
+### 3.4 Execução no período
+- atividades executadas no período;
+- serviços concluídos;
+- serviços em andamento;
+- serviços não executados;
+- frentes de trabalho ativas;
+- quantidade de equipes, se aplicável.
+
+### 3.5 Medições e pagamentos
+- medição vinculada ao período;
+- valor medido no período;
+- valor acumulado medido;
+- medição aprovada ou pendente;
+- observações sobre divergências;
+- relação com pagamento, se aplicável.
+
+### 3.6 Pendências e restrições
+- pendências técnicas;
+- pendências documentais;
+- pendências contratuais;
+- restrições de acesso;
+- interferências externas;
+- prazo estimado para solução.
+
+### 3.7 Riscos e atrasos
+- risco identificado;
+- causa provável;
+- impacto no prazo;
+- impacto no custo;
+- impacto na qualidade;
+- ação mitigadora;
+- responsável pela ação.
+
+### 3.8 Evidências
+- fotos;
+- anexos;
+- registros de visita;
+- documentos de apoio;
+- data das evidências;
+- descrição das evidências.
+
+### 3.9 Observações finais
+- resumo técnico do período;
+- recomendações;
+- encaminhamentos;
+- necessidade de providências;
+- conclusão do relatório.
+
+---
+
+## 4. Regras de negócio
+
+As regras abaixo devem orientar o comportamento do formulário e a consistência dos dados.
+
+### 4.1 Regra de identificação
+- Cada relatório deve possuir **identificação única** dentro do sistema.
+- O número do relatório não pode se repetir para a mesma obra, salvo se houver regra formal de versão.
+
+### 4.2 Regra de período

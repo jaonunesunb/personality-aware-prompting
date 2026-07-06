@@ -1,0 +1,147 @@
+## 1. Objetivo do formulário
+
+O formulário de **Boletim de Medição** serve para **registrar, conferir e formalizar a medição dos serviços executados em uma obra pública** em um período específico.
+
+Em termos práticos, ele apoia o órgão público a:
+
+- identificar **quais serviços foram executados**;
+- registrar **quantidades medidas**;
+- comparar o executado com o que foi contratado e planejado;
+- validar a medição para fins de **acompanhamento, aceite e pagamento**;
+- manter **rastreabilidade** entre execução física, evidências e documentos da obra.
+
+**Conceito importante:**  
+“Medir” aqui significa verificar e registrar a quantidade de serviço efetivamente executada, com base em critérios previamente definidos no contrato, na planilha orçamentária e no cronograma.
+
+---
+
+## 2. Entidades principais
+
+### 2.1 Boletim de Medição
+Documento principal do formulário. Representa uma medição de obra em um período determinado.
+
+### 2.2 Obra
+Empreendimento público acompanhado pelo sistema.
+
+### 2.3 Contrato
+Documento que define objeto, prazo, valor e condições gerais da obra.
+
+### 2.4 Planilha Orçamentária Analítica
+Base de referência para os itens medidos. Contém:
+- item;
+- descrição;
+- unidade;
+- quantidade contratada;
+- preço unitário;
+- valor total.
+
+### 2.5 Cronograma Físico-Financeiro
+Base de referência para verificar o planejamento da execução ao longo do tempo.
+
+### 2.6 Serviço Medido
+Linha do boletim que representa um item executado e quantificado no período.
+
+### 2.7 Evidência
+Comprovação associada à medição, como fotos, relatórios, documentos ou registros de campo.
+
+### 2.8 Responsáveis
+Perfis que atuam no processo, por exemplo:
+- fiscal da obra;
+- gestor do contrato;
+- representante da contratada;
+- aprovador/validador.
+
+### 2.9 Período de Medição
+Intervalo de datas ao qual o boletim se refere.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário, separados por tipo de informação.
+
+### 3.1 Identificação do boletim
+- Número do boletim
+- Obra vinculada
+- Contrato vinculado
+- Período inicial da medição
+- Período final da medição
+- Data de emissão
+- Situação do boletim  
+  Ex.: rascunho, em conferência, devolvido, aprovado, encerrado
+
+### 3.2 Dados de referência da obra
+- Nome da obra
+- Local da obra
+- Empresa contratada
+- Órgão responsável
+- Fiscal responsável
+- Gestor responsável
+
+### 3.3 Itens medidos
+Para cada item/serviço:
+- Código do item
+- Descrição do serviço
+- Unidade de medida
+- Quantidade contratada
+- Quantidade acumulada anterior
+- Quantidade medida no período
+- Quantidade acumulada atual
+- Percentual executado
+- Preço unitário
+- Valor medido no período
+- Observações do item
+- Referência à evidência
+
+### 3.4 Informações de conferência
+- Responsável pela medição
+- Responsável pela conferência
+- Data da conferência
+- Responsável pela validação/aprovação
+- Data da validação
+- Parecer da medição
+- Justificativa de glosa ou ajuste, se houver
+
+### 3.5 Anexos e evidências
+- Fotos
+- Relatórios de campo
+- Documentos complementares
+- Links ou referências a registros do Relatório Diário de Obras
+- Observações gerais
+
+### 3.6 Totais do boletim
+- Valor total medido no período
+- Valor acumulado medido
+- Saldo contratual por item
+- Saldo financeiro total
+- Percentual físico acumulado
+- Percentual financeiro acumulado
+
+---
+
+## 4. Regras de negócio
+
+A seguir, as regras de negócio devem ser entendidas como **comportamentos obrigatórios do sistema** ou **condições que precisam ser atendidas para o boletim ser aceito**.
+
+### 4.1 Vinculação obrigatória
+- Todo Boletim de Medição deve estar vinculado a **uma obra** e a **um contrato**.
+- O boletim deve usar como referência a **planilha orçamentária analítica** do contrato.
+
+### 4.2 Período de medição
+- O boletim deve registrar um período inicial e final.
+- O período final não pode ser anterior ao período inicial.
+- O período de medição deve estar compatível com a periodicidade definida pelo processo da obra.  
+  **Ponto a validar com especialista:** se a periodicidade é mensal, quinzenal ou por evento.
+
+### 4.3 Medição por item contratual
+- Apenas itens existentes na planilha orçamentária podem ser medidos.
+- Cada linha do boletim deve corresponder a um item contratual ou a um item formalmente autorizado.
+- A quantidade medida no período deve ser registrada por item.
+
+### 4.4 Limite de medição
+- A quantidade acumulada medida de um item não pode ultrapassar a quantidade contratada, salvo se houver regra formal de aditivo, reequilíbrio ou autorização específica.
+- Se houver extrapolação, o sistema deve sinalizar a inconsistência.
+
+### 4.5 Cálculo de valores
+- O valor medido no período deve ser calculado com base na quantidade medida e no preço unitário do item.
+- O total

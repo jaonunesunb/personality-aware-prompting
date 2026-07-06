@@ -1,0 +1,197 @@
+## 1. Objetivo do formulário
+
+O **Relatório de Acompanhamento de Obra** serve para **consolidar a situação atual da obra pública executada de forma indireta**, permitindo que o órgão público registre, de forma estruturada:
+
+- o andamento físico da obra;
+- pendências e impedimentos;
+- riscos e ocorrências relevantes;
+- atrasos em relação ao planejamento;
+- evidências de execução;
+- situação geral para tomada de decisão.
+
+**Finalidade prática:** apoiar a fiscalização, a gestão do contrato e a consolidação de informações para acompanhamento gerencial.
+
+---
+
+## 2. Entidades principais
+
+Abaixo estão as entidades que normalmente compõem esse formulário.
+
+### 2.1 Obra
+Representa o empreendimento acompanhado.
+
+**Exemplos de dados associados:**
+- identificação da obra;
+- nome do empreendimento;
+- local;
+- órgão responsável;
+- empresa contratada;
+- contrato vinculado.
+
+### 2.2 Relatório de Acompanhamento de Obra
+Documento principal do formulário.
+
+**Exemplos de dados associados:**
+- período de referência;
+- data de emissão;
+- responsável pelo preenchimento;
+- situação geral;
+- resumo executivo.
+
+### 2.3 Medições
+Informações sobre o que foi executado e medido no período.
+
+**Observação:** podem ser vinculadas ao boletim de medição.
+
+### 2.4 Ocorrências
+Eventos relevantes observados durante o acompanhamento.
+
+**Exemplos:**
+- paralisação;
+- atraso de fornecimento;
+- chuva intensa;
+- problema de projeto;
+- não conformidade.
+
+### 2.5 Pendências
+Itens que ainda precisam ser resolvidos.
+
+**Exemplos:**
+- documentação pendente;
+- correção de serviço;
+- liberação de área;
+- ajuste de projeto.
+
+### 2.6 Riscos
+Fatores que podem afetar prazo, custo, qualidade ou continuidade da obra.
+
+### 2.7 Evidências
+Registros que comprovam a situação informada.
+
+**Exemplos:**
+- fotos;
+- anexos;
+- links para documentos;
+- observações de campo.
+
+### 2.8 Responsáveis
+Pessoas ou setores envolvidos no acompanhamento.
+
+**Exemplos:**
+- fiscal da obra;
+- gestor do contrato;
+- engenheiro responsável;
+- empresa executora.
+
+---
+
+## 3. Campos necessários
+
+A seguir, uma proposta de campos para o formulário.
+
+### 3.1 Identificação do relatório
+- **Número do relatório**
+- **Data de emissão**
+- **Período de referência inicial**
+- **Período de referência final**
+- **Status do relatório**  
+  Ex.: rascunho, em revisão, validado, encerrado.
+- **Responsável pelo preenchimento**
+- **Unidade/órgão responsável**
+
+### 3.2 Identificação da obra
+- **Código da obra**
+- **Nome da obra**
+- **Contrato vinculado**
+- **Empresa contratada**
+- **Local da obra**
+- **Objeto resumido da obra**
+
+### 3.3 Situação geral
+- **Percentual físico executado no período**
+- **Percentual físico acumulado**
+- **Situação do cronograma**
+  - em dia
+  - com atraso
+  - adiantado
+  - paralisado
+- **Situação financeira**
+  - conforme previsto
+  - acima do previsto
+  - abaixo do previsto
+- **Resumo executivo da situação**
+
+### 3.4 Andamento da obra
+- **Atividades executadas no período**
+- **Serviços concluídos**
+- **Serviços em execução**
+- **Serviços não iniciados**
+- **Frentes de trabalho ativas**
+- **Quantidade de equipes em campo**
+- **Quantidade de equipamentos relevantes em uso**
+
+### 3.5 Medições e validações
+- **Boletim de medição vinculado**
+- **Valor medido no período**
+- **Valor acumulado medido**
+- **Valor previsto no cronograma para o período**
+- **Diferença entre previsto e realizado**
+- **Medição validada?**  
+  Sim/Não
+- **Observações sobre divergências de medição**
+
+### 3.6 Ocorrências e impedimentos
+- **Ocorrências registradas**
+- **Tipo de ocorrência**
+- **Data da ocorrência**
+- **Impacto estimado**
+- **Responsável pela tratativa**
+- **Prazo para solução**
+- **Situação da ocorrência**
+  - aberta
+  - em tratamento
+  - resolvida
+
+### 3.7 Pendências
+- **Pendências técnicas**
+- **Pendências administrativas**
+- **Pendências documentais**
+- **Pendências de projeto**
+- **Pendências de liberação de área**
+- **Prazo estimado para atendimento**
+
+### 3.8 Riscos e alertas
+- **Risco identificado**
+- **Categoria do risco**
+  - prazo
+  - custo
+  - qualidade
+  - segurança
+  - ambiental
+- **Probabilidade**
+- **Impacto**
+- **Nível do risco**
+- **Plano de ação**
+- **Responsável pelo acompanhamento**
+
+### 3.9 Evidências
+- **Fotos anexadas**
+- **Documentos anexados**
+- **Data da evidência**
+- **Descrição da evidência**
+- **Origem da evidência**
+  - campo
+  - sistema
+  - documento externo
+
+### 3.10 Conclusão do período
+- **Conclusão do acompanhamento**
+- **Recomendações**
+- **Encaminhamentos**
+- **Necessita ação da contratada?**
+- **Necessita ação do órgão?**
+- **Necessita revisão de cronograma?**
+
+---
+
+## 4. Regras de

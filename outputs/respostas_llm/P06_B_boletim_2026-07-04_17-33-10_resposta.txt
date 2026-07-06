@@ -1,0 +1,256 @@
+A seguir está um artefato inicial para o **formulário de Boletim de Medição**, organizado de forma prática e com passos curtos.  
+Vou separar **conceitos**, **regras** e **requisitos** para facilitar a leitura e a validação com o especialista do domínio.
+
+---
+
+## 1. Objetivo do formulário
+
+### Conceito
+O **Boletim de Medição** é o documento usado para registrar, em um período específico, os **serviços executados na obra** e a **quantidade efetivamente medida**. Ele serve como base para **conferência**, **validação técnica** e, quando aplicável, **pagamento** da contratada.
+
+### Objetivo do formulário
+Permitir que o órgão público:
+- registre a medição de serviços executados;
+- compare o que foi executado com o que foi contratado;
+- consolide valores medidos no período;
+- acompanhe a evolução física e financeira da obra;
+- gere evidências para aprovação, glosa ou ajuste da medição.
+
+### Checkpoint
+Se o sistema for usado por mais de um perfil, vale confirmar:
+- quem cria o boletim;
+- quem confere;
+- quem aprova;
+- se existe fluxo de devolução para correção.
+
+---
+
+## 2. Entidades principais
+
+### Conceito
+Entidades são os objetos centrais que o formulário precisa representar.
+
+### Entidades principais do Boletim de Medição
+1. **Obra**
+   - empreendimento público acompanhado pelo sistema.
+
+2. **Contrato**
+   - documento que define objeto, prazo, valor e condições gerais.
+
+3. **Planilha Orçamentária Analítica**
+   - lista os itens contratados, quantidades, preços unitários e totais.
+
+4. **Cronograma Físico-Financeiro**
+   - distribui a execução física e financeira ao longo do tempo.
+
+5. **Boletim de Medição**
+   - documento principal do formulário, referente a um período de medição.
+
+6. **Item de Medição**
+   - cada serviço/insumo medido dentro do boletim.
+
+7. **Medição Anterior**
+   - histórico de medições já registradas para comparação.
+
+8. **Evidência**
+   - anexos, fotos, relatórios ou documentos que comprovem a execução.
+
+9. **Responsável pela medição**
+   - usuário que registra ou valida a medição.
+
+10. **Status do boletim**
+   - situação atual: rascunho, em análise, aprovado, rejeitado etc.
+
+---
+
+## 3. Campos necessários
+
+### Conceito
+Campos são os dados que o formulário precisa capturar.
+
+### 3.1. Identificação do boletim
+- Número do boletim
+- Obra vinculada
+- Contrato vinculado
+- Período de medição inicial
+- Período de medição final
+- Data de emissão
+- Competência da medição, se aplicável
+- Status do boletim
+
+### 3.2. Dados de controle
+- Responsável pelo preenchimento
+- Responsável pela conferência
+- Responsável pela aprovação
+- Data de envio para análise
+- Data de aprovação/rejeição
+- Observações gerais
+
+### 3.3. Dados por item medido
+Para cada item da planilha orçamentária:
+- Código do item
+- Descrição do serviço
+- Unidade de medida
+- Quantidade contratada
+- Quantidade acumulada anterior
+- Quantidade medida no período
+- Quantidade acumulada atual
+- Saldo a medir
+- Preço unitário contratual
+- Valor medido no período
+- Percentual executado acumulado
+- Situação do item
+
+### 3.4. Evidências e justificativas
+- Lista de anexos
+- Tipo de evidência
+- Descrição da evidência
+- Justificativa para divergência, se houver
+- Registro de pendências
+
+### 3.5. Totais do boletim
+- Valor total medido no período
+- Valor acumulado medido
+- Percentual físico acumulado
+- Percentual financeiro acumulado
+- Diferença entre planejado e executado, se aplicável
+
+### Checkpoint
+Antes de fechar os campos, vale validar com o especialista:
+- se o boletim mede apenas itens da planilha ou também serviços extras;
+- se há retenções, glosas ou descontos no próprio boletim;
+- se o sistema precisa calcular automaticamente os totais.
+
+---
+
+## 4. Regras de negócio
+
+### Conceito
+Regras de negócio são as condições que determinam **o que pode ou não pode acontecer** no formulário.
+
+### Regras principais
+
+#### 4.1. Vinculação obrigatória
+- Todo boletim deve estar vinculado a **uma obra** e **um contrato**.
+- O boletim deve usar itens existentes na **planilha orçamentária analítica** do contrato, salvo exceções formalmente autorizadas.
+
+#### 4.2. Período de medição
+- O boletim deve registrar um período de medição com data inicial e final.
+- O período não pode ser vazio.
+- O período do boletim não pode se sobrepor indevidamente a outro boletim já aprovado, salvo regra específica do órgão.
+
+#### 4.3. Quantidade medida
+- A quantidade medida no período não pode ser negativa.
+- A quantidade acumulada atual não pode ultrapassar a quantidade contratada, salvo aditivo, reequilíbrio ou autorização formal.
+- A quantidade medida no período deve respeitar o saldo disponível do item.
+
+#### 4.4. Valor medido
+- O valor medido no período deve ser calculado com base na quantidade medida e no preço unitário contratual.
+- O sistema deve impedir divergência entre quantidade, preço unitário e valor total, salvo ajuste manual justificado e autorizado.
+
+#### 4.5. Acumulado
+- O acumulado atual deve ser igual ao acumulado anterior somado à medição do período.
+- O acumulado anterior deve refletir as medições já aprovadas.
+- O percentual executado deve ser calculado com base na quantidade acumulada em relação à quantidade contratada.
+
+#### 4.6. Situação do item
+- Um item pode ser marcado como:
+  - medido;
+  - parcialmente medido;
+  - não medido;
+  - glosado;
+  - pendente de análise.
+- A nomenclatura exata deve ser confirmada com o órgão.
+
+#### 4.7. Evidências
+- Itens medidos devem possuir evidências quando exigido pelo processo interno.
+- O sistema pode exigir anexos para itens críticos, medições parciais ou divergentes.
+
+#### 4.8. Aprovação
+- Um boletim só pode ser aprovado se estiver completo e sem inconsistências obrigatórias.
+- Boletins rejeitados devem manter histórico da justificativa da rejeição.
+- Após aprovação, alterações devem seguir fluxo de retificação, não edição direta, se essa for a regra do órgão.
+
+#### 4.9. Integração com planejamento
+- O boletim deve permitir comparação com o cronograma físico-financeiro.
+- Se houver atraso ou adiantamento relevante, o sistema pode registrar alerta.
+
+### Checkpoint
+Aqui é importante confirmar com o especialista:
+- se existe tolerância para arredondamento;
+- se o sistema aceita medição parcial por item;
+- se há regra de medição mínima por período;
+- se o boletim pode ser reaberto após aprovação.
+
+---
+
+## 5. Validações
+
+### Conceito
+Validações são verificações automáticas ou manuais para garantir consistência dos dados.
+
+### Validações obrigatórias
+
+#### 5.1. Validações de preenchimento
+- Número do boletim obrigatório.
+- Obra obrigatória.
+- Contrato obrigatório.
+- Período inicial e final obrigatórios.
+- Pelo menos um item medido ou justificado.
+- Responsável pelo preenchimento obrigatório.
+
+#### 5.2. Validações de formato
+- Datas devem ser válidas.
+- Data inicial não pode ser maior que a data final.
+- Campos numéricos devem aceitar apenas valores compatíveis com unidade e precisão definida.
+- Percentuais devem estar entre 0 e 100, quando aplicável.
+
+#### 5.3. Validações de consistência
+- Quantidade medida não pode exceder saldo contratual sem autorização.
+- Valor total deve bater com cálculo automático.
+- Acumulado atual deve ser coerente com o acumulado anterior.
+- O item medido deve existir na planilha contratual.
+
+#### 5.4. Validações de integridade documental
+- O boletim deve referenciar o contrato correto.
+- Se houver aditivo contratual, o sistema deve considerar a versão vigente da planilha.
+- Evidências obrigatórias não podem estar ausentes.
+
+#### 5.5. Validações de status
+- Não permitir aprovação de boletim incompleto.
+- Não permitir edição de boletim aprovado, se o processo exigir imutabilidade.
+- Não permitir exclusão de boletim com histórico de aprovação, salvo regra formal.
+
+### Exemplo prático
+Se o item contratado prevê **100 m²** e já foram medidos **80 m²**, o boletim atual não pode registrar **30 m²** sem gerar alerta, porque o total iria para **110 m²**.
+
+---
+
+## 6. Exceções e alertas
+
+### Conceito
+Exceções são situações fora do fluxo normal. Alertas são avisos que não bloqueiam necessariamente o processo, mas exigem atenção.
+
+### Exceções
+- Item executado não previsto na planilha.
+- Quantidade medida acima do saldo contratual.
+- Divergência entre medição e evidência anexada.
+- Medição fora do período esperado.
+- Boletim com dados incompletos, mas ainda em rascunho.
+- Necessidade de retificação de boletim já aprovado.
+
+### Alertas
+- Percentual executado muito acima do cronograma previsto.
+- Percentual executado muito abaixo do planejado.
+- Itens sem evidência anexada.
+- Medição acumulada próxima do limite contratual.
+- Divergência entre medição física e financeira.
+- Boletim sem observações em caso de glosa ou pendência.
+
+### Regras para alertas
+- Alertas não devem impedir o salvamento em rascunho.
+- Alertas críticos podem impedir o envio para aprovação.
+- Toda exceção relevante deve registrar justificativa.
+
+### Checkpoint
+Vale confirmar

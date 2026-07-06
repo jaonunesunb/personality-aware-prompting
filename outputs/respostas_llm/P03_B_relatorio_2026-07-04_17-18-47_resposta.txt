@@ -1,0 +1,147 @@
+## 1. Objetivo do formulário
+
+O **Relatório de Acompanhamento de Obra** tem como objetivo **consolidar, em um único registro, a situação atual da obra pública executada de forma indireta**.
+
+Ele deve permitir que o órgão público registre e acompanhe, de forma estruturada:
+
+- o **andamento físico** da obra;
+- o **andamento financeiro**;
+- as **pendências** identificadas;
+- os **riscos e atrasos**;
+- as **ocorrências relevantes**;
+- a **situação geral** da execução;
+- a **aderência** entre o que foi planejado e o que foi executado.
+
+### Conceito técnico
+- **Execução indireta**: a obra é executada por uma empresa contratada, enquanto o órgão público faz o acompanhamento, fiscalização, validação e consolidação das informações.
+- **Consolidação**: o relatório não substitui os documentos de origem; ele reúne e sintetiza informações de vários documentos e registros da obra.
+
+---
+
+## 2. Entidades principais
+
+As entidades abaixo representam os objetos centrais do formulário e seus vínculos.
+
+### 2.1 Obra
+Representa o empreendimento público acompanhado.
+
+**Atributos típicos:**
+- identificador da obra;
+- nome/descrição;
+- local;
+- órgão responsável;
+- empresa contratada;
+- status geral.
+
+### 2.2 Contrato
+Documento que formaliza a contratação da execução da obra.
+
+**Atributos relevantes:**
+- número do contrato;
+- objeto;
+- prazo;
+- valor contratado;
+- vigência;
+- empresa contratada.
+
+### 2.3 Planilha Orçamentária Analítica
+Documento que detalha os itens da obra, quantidades, custos e composição orçamentária.
+
+**Atributos relevantes:**
+- itens orçamentários;
+- quantidades previstas;
+- valores unitários;
+- valores totais por item.
+
+### 2.4 Cronograma Físico-Financeiro
+Documento que distribui a execução física e financeira ao longo do tempo.
+
+**Atributos relevantes:**
+- etapas/fases;
+- períodos de execução;
+- percentuais físicos;
+- percentuais financeiros;
+- marcos previstos.
+
+### 2.5 Boletim de Medição
+Documento que registra os serviços executados em determinado período.
+
+**Atributos relevantes:**
+- período de medição;
+- serviços medidos;
+- quantidades executadas;
+- valores medidos;
+- situação de validação.
+
+### 2.6 Relatório Diário de Obras
+Registro cotidiano da execução.
+
+**Atributos relevantes:**
+- data;
+- atividades realizadas;
+- ocorrências;
+- condições climáticas;
+- evidências;
+- equipe presente.
+
+### 2.7 Relatório de Acompanhamento de Obra
+Documento principal deste formulário.
+
+**Atributos relevantes:**
+- período de referência;
+- situação física;
+- situação financeira;
+- pendências;
+- riscos;
+- atrasos;
+- observações;
+- recomendações;
+- responsável pelo registro.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário. A lista pode ser ajustada conforme o nível de detalhamento desejado pelo órgão.
+
+### 3.1 Identificação do relatório
+- **ID do relatório**: identificador único.
+- **Obra vinculada**: referência à obra acompanhada.
+- **Contrato vinculado**: referência ao contrato.
+- **Número do relatório**: sequencial ou código interno.
+- **Data de emissão**: data em que o relatório foi gerado.
+- **Período de referência**: intervalo de datas coberto pelo relatório.
+- **Responsável pelo preenchimento**: servidor ou fiscal responsável.
+- **Unidade/órgão responsável**: setor que emite o relatório.
+
+### 3.2 Situação geral da obra
+- **Status geral da obra**: em andamento, paralisada, concluída, suspensa, atrasada etc.
+- **Percentual físico executado**: avanço físico acumulado.
+- **Percentual financeiro executado**: avanço financeiro acumulado.
+- **Comparativo com o cronograma**: dentro do prazo, adiantado, atrasado.
+- **Resumo executivo**: síntese textual da situação.
+
+### 3.3 Andamento físico
+- **Etapa atual da obra**: fase ou frente de serviço em execução.
+- **Serviços executados no período**: descrição das atividades realizadas.
+- **Serviços previstos e não executados**: itens pendentes do período.
+- **Medições físicas associadas**: referência aos boletins de medição.
+- **Evidências de execução**: fotos, documentos, anexos, links.
+
+### 3.4 Andamento financeiro
+- **Valor previsto no período**: valor planejado para o período.
+- **Valor medido no período**: valor efetivamente medido.
+- **Valor acumulado medido**: total acumulado até a data.
+- **Saldo contratual**: valor remanescente do contrato.
+- **Desvios financeiros**: diferença entre previsto e realizado.
+
+### 3.5 Pendências
+- **Descrição da pendência**: problema identificado.
+- **Tipo de pendência**: documental, técnica, operacional, contratual, ambiental, logística etc.
+- **Responsável pela pendência**: contratada, fiscalização, órgão, terceiro.
+- **Prazo para solução**: data limite, se aplicável.
+- **Status da pendência**: aberta, em tratamento, resolvida, vencida.
+
+### 3.6 Riscos e alertas
+- **Descrição do risco**: evento que pode impactar prazo, custo ou qualidade.
+- **Categoria do risco**: prazo, custo

@@ -1,0 +1,140 @@
+A seguir está um artefato estruturado para apoiar a definição de regras de negócio de um **formulário de Boletim de Medição** no contexto de obras públicas executadas de forma indireta.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Boletim de Medição** tem como objetivo **registrar, conferir e formalizar os serviços executados em um período específico da obra**, permitindo ao órgão público:
+
+- verificar o que foi efetivamente realizado pela contratada;
+- comparar a execução com o planejamento e com a planilha contratual;
+- validar quantitativos para fins de acompanhamento e eventual pagamento;
+- manter histórico de medições por período;
+- apoiar auditoria, fiscalização e consolidação do andamento da obra.
+
+### Conceitos importantes
+- **Medição**: apuração formal da quantidade de serviço executado em um período.
+- **Serviço medido**: item da obra que teve execução comprovada e quantificada.
+- **Boletim**: documento que consolida os itens medidos em uma determinada competência/período.
+
+---
+
+## 2. Entidades principais
+
+As principais entidades envolvidas no formulário são:
+
+1. **Obra**
+   - Identifica o empreendimento acompanhado.
+   - Ex.: construção de escola, pavimentação, reforma de unidade de saúde.
+
+2. **Contrato**
+   - Define o vínculo formal com a empresa executora.
+   - Contém objeto, prazo, valor e condições gerais.
+
+3. **Planilha Orçamentária Analítica**
+   - Lista os itens contratados, com quantidades, preços unitários e valores totais.
+   - É a base para validar o que pode ser medido.
+
+4. **Cronograma Físico-Financeiro**
+   - Define a previsão de execução física e financeira ao longo do tempo.
+   - Serve como referência para comparar o realizado com o planejado.
+
+5. **Boletim de Medição**
+   - Documento principal do formulário.
+   - Consolida os serviços medidos em um período.
+
+6. **Item de Medição**
+   - Cada linha do boletim, correspondente a um serviço específico.
+   - Ex.: terraplenagem, fundação, pintura, instalação elétrica.
+
+7. **Fiscal / Responsável técnico do órgão**
+   - Usuário que confere, valida ou rejeita a medição.
+
+8. **Contratada**
+   - Empresa responsável pela execução da obra.
+
+9. **Evidências**
+   - Registros que comprovam a execução: fotos, relatórios, anotações, documentos de apoio.
+
+10. **Medições anteriores**
+    - Histórico de boletins já registrados, necessário para cálculo acumulado.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário, separados por grupo.
+
+### 3.1 Identificação do boletim
+- **Número do boletim**
+- **Obra vinculada**
+- **Contrato vinculado**
+- **Contratada**
+- **Período de medição inicial**
+- **Período de medição final**
+- **Data de emissão**
+- **Data de conferência**
+- **Status do boletim**
+  - Ex.: rascunho, em conferência, validado, rejeitado, encerrado.
+
+### 3.2 Dados de referência
+- **Número da planilha orçamentária**
+- **Versão da planilha**
+- **Número do cronograma físico-financeiro**
+- **Versão do cronograma**
+- **Fiscal responsável**
+- **Responsável pela elaboração**
+- **Observações gerais**
+
+### 3.3 Itens medidos
+Para cada item:
+- **Código do item**
+- **Descrição do serviço**
+- **Unidade de medida**
+- **Quantidade contratada**
+- **Quantidade acumulada anterior**
+- **Quantidade medida no período**
+- **Quantidade acumulada atual**
+- **Saldo a medir**
+- **Preço unitário**
+- **Valor medido no período**
+- **Percentual executado**
+- **Percentual acumulado**
+- **Situação do item**
+  - Ex.: não iniciado, em execução, concluído, suspenso.
+
+### 3.4 Evidências e suporte
+- **Anexos**
+- **Fotos**
+- **Relatórios de campo**
+- **Observações por item**
+- **Justificativa para divergências**
+- **Referência ao Relatório Diário de Obras**
+- **Referência ao Relatório de Acompanhamento de Obra**
+
+### 3.5 Aprovação
+- **Nome do aprovador**
+- **Data de aprovação**
+- **Parecer**
+- **Motivo de rejeição, se houver**
+- **Assinatura eletrônica ou identificação funcional**
+
+---
+
+## 4. Regras de negócio
+
+A seguir, as regras de negócio sugeridas para o formulário.
+
+### 4.1 Regras de identificação e vínculo
+1. Todo boletim deve estar vinculado a **uma única obra** e **um único contrato**.
+2. O boletim deve referenciar uma **planilha orçamentária analítica vigente**.
+3. O boletim deve referenciar o **cronograma físico-financeiro vigente**, quando aplicável.
+4. O boletim deve possuir **numeração sequencial** por obra ou por contrato, conforme padrão definido pelo órgão.
+
+### 4.2 Regras de período
+5. O período de medição deve ter **data inicial menor ou igual à data final**.
+6. O período do boletim não pode se sobrepor a outro boletim já validado da mesma obra/contrato, salvo se o processo permitir retificação.
+7. O boletim deve registrar apenas serviços executados **dentro do período informado**.
+8. O período deve respeitar a periodicidade definida pelo contrato ou pela fiscalização.
+
+### 4.3

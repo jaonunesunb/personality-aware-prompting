@@ -1,0 +1,138 @@
+A seguir está um artefato estruturado para o **formulário de Relatório de Acompanhamento de Obra**, com foco em regras de negócio, validações e relações com os demais documentos do domínio.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Relatório de Acompanhamento de Obra** tem como objetivo **registrar e consolidar a situação atual da obra pública executada de forma indireta**, permitindo ao órgão público:
+
+- acompanhar o andamento físico e financeiro da obra;
+- registrar pendências, riscos, atrasos e ocorrências relevantes;
+- consolidar evidências e informações de campo;
+- apoiar decisões de fiscalização, validação e gestão contratual;
+- manter histórico formal do acompanhamento da execução.
+
+### Conceito do domínio
+- **Execução indireta**: a obra é realizada por uma empresa contratada, e o órgão público atua como fiscalizador, validador e consolidado das informações.
+- **Acompanhamento**: não é apenas registro de fatos; envolve análise da situação da obra, comparação com o planejado e indicação de desvios.
+
+---
+
+## 2. Entidades principais
+
+### 2.1. Relatório de Acompanhamento de Obra
+Entidade principal do formulário. Representa um registro periódico da situação da obra em uma data ou período.
+
+### 2.2. Obra
+Objeto principal acompanhado. Pode estar vinculada a um contrato e a um conjunto de documentos de planejamento e execução.
+
+### 2.3. Contrato
+Documento que formaliza a contratação da empresa executora e define objeto, prazo, valor e condições gerais.
+
+### 2.4. Cronograma Físico-Financeiro
+Documento de planejamento que distribui a execução física e financeira ao longo do tempo.
+
+### 2.5. Boletim de Medição
+Documento que registra os serviços executados e medidos em determinado período, servindo de base para conferência e pagamento.
+
+### 2.6. Relatório Diário de Obras
+Registro cotidiano de atividades, ocorrências e evidências da obra.
+
+### 2.7. Pendência
+Item que impede, atrasa ou compromete a execução, validação ou conclusão de etapas.
+
+### 2.8. Risco
+Evento ou condição que pode impactar prazo, custo, qualidade, segurança ou continuidade da obra.
+
+### 2.9. Evidência
+Arquivo, foto, observação ou documento que comprova a situação informada.
+
+### 2.10. Responsável pelo acompanhamento
+Servidor ou agente designado para registrar e validar o relatório.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados, separados por categoria.
+
+### 3.1. Identificação do relatório
+- **Número do relatório**
+- **Data de referência**
+- **Período de acompanhamento** (início e fim, se aplicável)
+- **Status do relatório** (rascunho, em análise, validado, rejeitado, encerrado)
+- **Unidade/órgão responsável**
+- **Responsável pelo preenchimento**
+- **Responsável pela validação**
+
+### 3.2. Identificação da obra
+- **Código da obra**
+- **Nome da obra**
+- **Objeto da obra**
+- **Localização**
+- **Contrato vinculado**
+- **Empresa contratada**
+- **Fiscal/gestor responsável**
+- **Prazo contratual**
+- **Data de início prevista**
+- **Data de término prevista**
+- **Data de término atualizada**, se houver reprogramação
+
+### 3.3. Situação geral da obra
+- **Percentual físico planejado**
+- **Percentual físico executado**
+- **Percentual financeiro planejado**
+- **Percentual financeiro executado**
+- **Situação geral** (normal, em atenção, atrasada, paralisada, concluída, suspensa)
+- **Resumo executivo**
+- **Principais avanços do período**
+- **Principais problemas do período**
+
+### 3.4. Acompanhamento da execução
+- **Etapas/serviços em execução**
+- **Etapas/serviços concluídos no período**
+- **Etapas/serviços pendentes**
+- **Desvios em relação ao cronograma**
+- **Justificativa para desvios**
+- **Impacto estimado no prazo**
+- **Impacto estimado no custo**, se aplicável
+- **Necessidade de reprogramação**
+
+### 3.5. Pendências e riscos
+- **Lista de pendências**
+- **Descrição da pendência**
+- **Responsável pela tratativa**
+- **Prazo para solução**
+- **Prioridade**
+- **Lista de riscos**
+- **Probabilidade**
+- **Impacto**
+- **Plano de mitigação**
+- **Status da pendência/risco**
+
+### 3.6. Evidências e registros de campo
+- **Fotos**
+- **Documentos anexos**
+- **Observações de campo**
+- **Ocorrências relevantes**
+- **Condições climáticas**, se relevantes para a obra
+- **Interferências externas**
+- **Ocorrências de segurança**, se aplicável
+
+### 3.7. Relação com medições e relatórios diários
+- **Boletim de medição relacionado**
+- **Relatórios diários de obra relacionados**
+- **Observações sobre divergências entre medição e execução**
+- **Validação de compatibilidade entre execução e medição**
+
+### 3.8. Aprovação e encerramento
+- **Parecer do responsável**
+- **Data de validação**
+- **Assinatura eletrônica ou identificação do validador**
+- **Observações finais**
+- **Encaminhamentos**
+- **Necessidade de ação corretiva**
+
+---
+
+## 4. Regras de

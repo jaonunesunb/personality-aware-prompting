@@ -1,0 +1,154 @@
+A seguir está um artefato estruturado para o **formulário de Boletim de Medição** no contexto de obras públicas executadas de forma indireta.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Boletim de Medição** tem como objetivo **registrar, conferir e formalizar os serviços executados em um período da obra**, com base no que foi efetivamente realizado pela empresa contratada.
+
+Ele serve para:
+
+- medir quantitativamente os serviços executados;
+- comparar o executado com o previsto no contrato e no cronograma;
+- apoiar a validação técnica e administrativa da medição;
+- subsidiar o pagamento da contratada;
+- registrar eventuais glosas, pendências, divergências ou observações.
+
+**Termos do domínio:**
+- **Medição**: verificação e quantificação dos serviços executados em determinado período.
+- **Glosa**: desconto ou rejeição parcial de itens medidos, quando há divergência, erro ou não conformidade.
+- **Execução indireta**: a obra é realizada por empresa contratada, enquanto o órgão público acompanha e valida.
+
+---
+
+## 2. Entidades principais
+
+### 2.1. Boletim de Medição
+Documento principal do formulário. Representa uma medição específica de um período.
+
+### 2.2. Obra
+Unidade principal do acompanhamento. O boletim sempre está vinculado a uma obra.
+
+### 2.3. Contrato
+Documento que define objeto, prazo, valor e condições da obra. O boletim deve respeitar seus limites.
+
+### 2.4. Planilha Orçamentária Analítica
+Base de referência para os itens medidos, com quantidades, preços unitários e composição orçamentária.
+
+### 2.5. Cronograma Físico-Financeiro
+Base de comparação entre o planejado e o executado ao longo do tempo.
+
+### 2.6. Item de Medição
+Cada serviço ou insumo medido no boletim, vinculado a um item da planilha orçamentária.
+
+### 2.7. Evidência
+Registro de apoio à medição, como fotos, relatórios, documentos ou observações de campo.
+
+### 2.8. Responsáveis
+Pessoas ou perfis que elaboram, conferem, validam e aprovam a medição.
+
+### 2.9. Relatórios de apoio
+- **Relatório Diário de Obras**
+- **Relatório de Acompanhamento de Obra**
+
+Esses documentos podem justificar ocorrências, atrasos, paralisações ou divergências.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário.
+
+### 3.1. Identificação do boletim
+- Número do boletim
+- Obra vinculada
+- Contrato vinculado
+- Período de medição inicial
+- Período de medição final
+- Data de emissão
+- Situação do boletim  
+  Ex.: rascunho, em conferência, validado, rejeitado, aprovado, pago
+
+### 3.2. Dados da obra/contrato
+- Nome da obra
+- Número do contrato
+- Contratada
+- Órgão responsável
+- Local da obra
+- Prazo contratual
+- Valor contratual
+- Percentual executado acumulado
+
+### 3.3. Dados da medição
+- Competência da medição
+- Responsável pela elaboração
+- Responsável pela conferência
+- Responsável pela validação
+- Data da vistoria/inspeção
+- Observações gerais da medição
+
+### 3.4. Itens medidos
+Para cada item:
+- Código do item
+- Descrição do serviço
+- Unidade de medida
+- Quantidade contratada
+- Quantidade acumulada anterior
+- Quantidade medida no período
+- Quantidade acumulada atual
+- Quantidade restante
+- Preço unitário
+- Valor do item no período
+- Valor acumulado
+- Percentual executado do item
+- Situação do item  
+  Ex.: medido, parcialmente medido, glosado, pendente, não executado
+
+### 3.5. Totais financeiros
+- Valor bruto medido no período
+- Valor glosado
+- Valor líquido a pagar
+- Percentual financeiro executado acumulado
+- Saldo contratual restante
+
+### 3.6. Evidências e anexos
+- Fotos
+- Relatórios de campo
+- Croquis
+- Laudos
+- Observações técnicas
+- Anexos complementares
+
+### 3.7. Aprovações
+- Nome e cargo do responsável técnico
+- Nome e cargo do fiscal da obra
+- Nome e cargo do gestor do contrato
+- Data de conferência
+- Data de validação
+- Data de aprovação
+
+---
+
+## 4. Regras de negócio
+
+### 4.1. Vinculação obrigatória
+O boletim de medição deve estar vinculado a:
+- uma única obra;
+- um único contrato;
+- uma única competência/período de medição.
+
+### 4.2. Base de medição
+Somente podem ser medidos itens que existam na **Planilha Orçamentária Analítica** do contrato, salvo exceção formalmente autorizada.
+
+### 4.3. Controle de quantidade
+A quantidade medida no período:
+- não pode ser negativa;
+- não pode ultrapassar a quantidade contratada do item, exceto se houver aditivo ou autorização formal registrada;
+- deve respeitar a quantidade já medida anteriormente.
+
+### 4.4. Controle acumulado
+A quantidade acumulada atual do item deve ser igual a:
+
+**quantidade acumulada anterior + quantidade medida no período**
+
+### 4.5.

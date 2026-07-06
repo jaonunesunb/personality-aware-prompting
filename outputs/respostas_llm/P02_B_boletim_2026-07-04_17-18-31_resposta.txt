@@ -1,0 +1,177 @@
+A seguir está um artefato estruturado para apoiar a criação de **regras de negócio de um formulário de Boletim de Medição**.  
+Vou manter a explicação em passos curtos e com termos do domínio explicados quando aparecerem.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Boletim de Medição** serve para **registrar e comprovar os serviços executados em um período da obra**, comparando o que foi realizado com o que estava previsto no contrato e na planilha orçamentária.
+
+Em termos práticos, o formulário deve permitir que o órgão público:
+
+- informe o período medido;
+- registre os itens/serviços executados;
+- informe quantidades medidas;
+- calcule valores correspondentes;
+- valide o que pode ser pago;
+- mantenha histórico de conferência e aprovação.
+
+### Conceito importante
+- **Medição**: verificação formal da quantidade de serviço executado em um período.
+- **Boletim de Medição**: documento que consolida essa verificação e normalmente serve de base para pagamento.
+
+---
+
+## 2. Entidades principais
+
+Aqui estão as entidades mais prováveis no formulário e no processo ao redor dele.
+
+### 2.1 Boletim de Medição
+Documento principal do formulário.
+
+**Atributos típicos:**
+- número do boletim;
+- obra vinculada;
+- contrato vinculado;
+- período de referência;
+- data de emissão;
+- status;
+- responsável pela medição;
+- observações gerais.
+
+### 2.2 Item de medição
+Cada linha do boletim, representando um serviço medido.
+
+**Atributos típicos:**
+- código do item;
+- descrição do serviço;
+- unidade de medida;
+- quantidade contratada;
+- quantidade acumulada anterior;
+- quantidade medida no período;
+- quantidade acumulada atual;
+- preço unitário;
+- valor do período;
+- valor acumulado.
+
+### 2.3 Contrato
+Base legal e administrativa da obra.
+
+**Atributos relevantes para o boletim:**
+- objeto;
+- prazo;
+- valor total contratado;
+- vigência;
+- empresa contratada;
+- condições de medição e pagamento.
+
+### 2.4 Planilha Orçamentária Analítica
+Base de itens e valores do contrato.
+
+**Atributos relevantes:**
+- itens orçamentários;
+- quantidades previstas;
+- preços unitários;
+- total por item;
+- composição orçamentária.
+
+### 2.5 Cronograma Físico-Financeiro
+Planejamento da execução ao longo do tempo.
+
+**Atributos relevantes:**
+- etapas;
+- períodos previstos;
+- percentuais físicos e financeiros;
+- valores planejados por período.
+
+### 2.6 Evidências / anexos
+Documentos de apoio à medição.
+
+**Exemplos:**
+- fotos;
+- relatórios;
+- planilhas de apoio;
+- registros de campo;
+- assinaturas ou aprovações.
+
+### 2.7 Aprovação / conferência
+Registro de validação do boletim.
+
+**Atributos típicos:**
+- conferente;
+- aprovador;
+- data de validação;
+- parecer;
+- status de aprovação.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos que normalmente fazem sentido em um formulário de Boletim de Medição.  
+Separei em blocos para ficar mais fácil de implementar.
+
+### 3.1 Identificação do boletim
+- Número do boletim
+- Obra
+- Contrato
+- Empresa contratada
+- Período inicial
+- Período final
+- Data de emissão
+- Status do boletim
+
+### 3.2 Dados de controle
+- Responsável pela medição
+- Unidade/órgão responsável
+- Data da conferência
+- Data da aprovação
+- Observações gerais
+- Justificativa de ajustes, se houver
+
+### 3.3 Itens medidos
+Para cada item:
+- Código do item
+- Descrição do item
+- Unidade de medida
+- Quantidade contratada
+- Quantidade já medida anteriormente
+- Quantidade medida neste boletim
+- Quantidade acumulada
+- Preço unitário
+- Valor do item no período
+- Valor acumulado do item
+- Percentual executado do item
+
+### 3.4 Evidências
+- Tipo de evidência
+- Arquivo anexado
+- Descrição da evidência
+- Data do registro
+- Autor do registro
+
+### 3.5 Aprovação e validação
+- Situação da conferência
+- Situação da aprovação
+- Nome do aprovador
+- Data da aprovação
+- Motivo de rejeição, se aplicável
+
+---
+
+## 4. Regras de negócio
+
+Aqui estão as regras de negócio mais importantes.  
+Vou separar em regras de cadastro, cálculo, validação e fluxo.
+
+### 4.1 Regras de vínculo
+1. O Boletim de Medição deve estar vinculado a **uma obra** e a **um contrato**.
+2. O contrato vinculado deve estar **ativo** ou em situação que permita medição.
+3. O boletim deve referenciar itens existentes na **Planilha Orçamentária Analítica**.
+4. Não deve ser possível medir item que não exista no contrato/planilha, salvo exceção formal aprovada.
+
+### 4.2 Regras de período
+5. O boletim deve possuir **período inicial** e **período final**.
+6. O período final não pode ser anterior ao período inicial.
+7. O período do boletim deve respeitar a lógica de medição definida pelo órgão, por exemplo mensal, quinzenal ou por marco físico.
+8. Não deve haver sobreposição indevida entre boletins do mesmo contrato, se o processo exigir

@@ -1,0 +1,180 @@
+A seguir está um artefato estruturado para o **formulário de Boletim de Medição** no contexto de obras públicas executadas de forma indireta.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Boletim de Medição** tem como objetivo **registrar, conferir e formalizar os serviços executados em um período específico da obra**, com base no que foi efetivamente realizado pela empresa contratada.
+
+Ele serve para:
+
+- apoiar a **verificação da execução física** da obra;
+- consolidar as **quantidades medidas** de cada serviço;
+- subsidiar a **validação técnica** pelo órgão público;
+- apoiar o **processo de pagamento** da contratada;
+- manter histórico de medições por período, item e obra.
+
+### Conceitos importantes
+- **Medição**: apuração da quantidade de serviço executado em determinado período.
+- **Serviço medido**: item da obra que teve execução comprovada e quantificada.
+- **Validação**: conferência e aprovação, total ou parcial, da medição pelo órgão público.
+- **Período de medição**: intervalo de tempo ao qual o boletim se refere.
+
+---
+
+## 2. Entidades principais
+
+### 2.1. Obra
+Representa o empreendimento público acompanhado pelo sistema.
+
+**Atributos típicos:**
+- identificação da obra;
+- nome;
+- local;
+- órgão responsável;
+- empresa contratada;
+- situação atual.
+
+### 2.2. Contrato
+Documento que formaliza a contratação da execução da obra.
+
+**Atributos típicos:**
+- número do contrato;
+- objeto;
+- prazo;
+- valor contratado;
+- vigência;
+- empresa contratada.
+
+### 2.3. Planilha Orçamentária Analítica
+Documento que detalha os itens da obra, com quantidades, preços e composições.
+
+**Atributos típicos:**
+- código do item;
+- descrição do serviço;
+- unidade de medida;
+- quantidade contratada;
+- preço unitário;
+- valor total.
+
+### 2.4. Cronograma Físico-Financeiro
+Documento que distribui a execução prevista ao longo do tempo.
+
+**Atributos típicos:**
+- período;
+- percentual físico previsto;
+- valor financeiro previsto;
+- marcos de execução.
+
+### 2.5. Boletim de Medição
+Entidade principal do formulário.
+
+**Atributos típicos:**
+- número da medição;
+- período de referência;
+- data de emissão;
+- status;
+- responsável pela elaboração;
+- responsável pela conferência;
+- observações.
+
+### 2.6. Item de Medição
+Linha do boletim que representa um serviço específico medido.
+
+**Atributos típicos:**
+- item da planilha;
+- unidade;
+- quantidade anterior;
+- quantidade medida no período;
+- quantidade acumulada;
+- valor correspondente.
+
+### 2.7. Evidência / Anexo
+Documentos ou registros que comprovam a execução.
+
+**Exemplos:**
+- fotos;
+- relatórios;
+- croquis;
+- registros de campo;
+- assinaturas;
+- documentos complementares.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário, separados por grupo.
+
+### 3.1. Identificação do boletim
+- Número do boletim de medição
+- Obra vinculada
+- Contrato vinculado
+- Empresa contratada
+- Período inicial da medição
+- Período final da medição
+- Data de emissão
+- Status do boletim
+- Responsável pela elaboração
+- Responsável pela conferência
+- Responsável pela aprovação, se aplicável
+
+### 3.2. Dados gerais da medição
+- Tipo de medição
+  - exemplo: parcial, final, complementar, retificadora
+- Observações gerais
+- Justificativa para medição fora do padrão, se houver
+- Percentual físico acumulado
+- Valor financeiro acumulado
+- Valor medido no período
+- Valor retido, se aplicável
+- Valor a pagar, se aplicável
+
+### 3.3. Itens medidos
+Para cada item:
+- Código do item da planilha
+- Descrição do serviço
+- Unidade de medida
+- Quantidade contratada
+- Quantidade já medida anteriormente
+- Quantidade medida neste boletim
+- Quantidade acumulada após a medição
+- Quantidade restante
+- Preço unitário
+- Valor do item no período
+- Valor acumulado do item
+- Situação do item
+  - exemplo: não iniciado, em execução, concluído, suspenso
+- Observações do item
+
+### 3.4. Evidências e anexos
+- Tipo de evidência
+- Descrição da evidência
+- Arquivo anexado
+- Data da evidência
+- Autor da evidência
+- Vinculação ao item medido, se aplicável
+
+### 3.5. Aprovação e conferência
+- Data da conferência
+- Resultado da conferência
+- Pendências identificadas
+- Ajustes solicitados
+- Data da aprovação
+- Assinatura eletrônica ou identificação do aprovador
+
+---
+
+## 4. Regras de negócio
+
+### 4.1. Vinculação obrigatória
+O boletim de medição deve estar vinculado a:
+- uma **obra**;
+- um **contrato**;
+- uma **planilha orçamentária analítica** válida.
+
+### 4.2. Medição por item contratado
+Somente podem ser medidos itens que existam na planilha orçamentária analítica do contrato.
+
+### 4.3. Limite de quantidade
+A quantidade medida acumulada de um item **não pode ultrap
