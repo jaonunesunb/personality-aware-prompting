@@ -47,8 +47,7 @@ is not sufficient to claim a conclusive benefit of personality-aware prompting.
 ## Repository structure
 
 ```text
-personality-aware-re-prompting/
-│
+EXPERIMENTO_ESI_LLM/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
@@ -56,26 +55,17 @@ personality-aware-re-prompting/
 ├── .env.example
 │
 ├── paper/
-│   ├── main.tex
-│   └── references.bib
-│
-├── slides/
-│   ├── apresentacao.tex
-│   ├── apresentacao.pdf
-│   ├── fig_fluxo_documental_obras.png
-│   └── fig_protocolo_k0_k1.png
+│   └── artigo.pdf
 │
 ├── scripts/
-│   ├── generate_materials.py
-│   └── compute_results.py
+│   └── generate_materials.py
 │
-├── data/
-│   ├── condition_results_corrected.csv
-│   ├── k0_summary.csv
-│   └── k1_summary_corrected.csv
+├── docs/
+│   ├── protocol_summary.md
+│   ├── prompt_strategy.md
+│   ├── scoring_summary.md
+│   └── results_summary.md
 │
-└── appendix/
-    ├── experimental_design.md
-    ├── prompt_design_summary.md
-    ├── scoring_summary.md
-    └── executed_protocol_checklist.md
+└── outputs/
+    ├── prompts_enviados/
+    └── respostas_llm/
