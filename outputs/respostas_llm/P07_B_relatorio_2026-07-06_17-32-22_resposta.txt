@@ -1,0 +1,319 @@
+A seguir está um artefato estruturado para apoiar a definição de regras de negócio do **formulário de Relatório de Acompanhamento de Obra**.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Relatório de Acompanhamento de Obra** tem como finalidade **consolidar, em um período de referência, a situação atual da obra pública executada de forma indireta**, permitindo ao órgão público registrar e acompanhar:
+
+- o andamento físico da obra;
+- o andamento financeiro, quando aplicável ao acompanhamento;
+- pendências e impedimentos;
+- riscos, atrasos e desvios;
+- evidências e observações relevantes;
+- a situação geral da execução em relação ao planejamento e aos documentos contratuais.
+
+### Finalidade operacional
+O formulário deve servir como instrumento de:
+- **controle gerencial** da obra;
+- **registro formal** do acompanhamento;
+- **base para tomada de decisão**;
+- **subsídio para validação de medições, cronogramas e providências corretivas**.
+
+### Conceito importante
+- **Obra executada de forma indireta**: a execução é realizada por uma empresa contratada, enquanto o órgão público acompanha, fiscaliza, registra e valida informações.
+- **Acompanhamento**: não é apenas registro descritivo; envolve comparação entre o planejado e o executado, identificação de desvios e indicação de providências.
+
+---
+
+## 2. Entidades principais
+
+As entidades abaixo representam os elementos centrais do formulário e de seu contexto.
+
+### 2.1. Obra
+Representa o empreendimento público acompanhado.
+
+**Atributos típicos:**
+- identificação da obra;
+- nome ou descrição;
+- local de execução;
+- órgão responsável;
+- empresa contratada;
+- contrato vinculado;
+- status atual.
+
+### 2.2. Contrato
+Documento que formaliza a contratação da empresa executora.
+
+**Atributos relevantes:**
+- número do contrato;
+- objeto;
+- prazo;
+- valor;
+- vigência;
+- condições gerais.
+
+### 2.3. Período de acompanhamento
+Intervalo temporal ao qual o relatório se refere.
+
+**Atributos relevantes:**
+- data inicial;
+- data final;
+- competência de referência;
+- data de emissão.
+
+### 2.4. Situação da obra
+Resumo do estado atual da execução.
+
+**Exemplos de situação:**
+- em andamento;
+- atrasada;
+- paralisada;
+- concluída;
+- concluída com pendências;
+- suspensa.
+
+### 2.5. Avanço físico
+Percentual ou descrição do progresso da execução física.
+
+**Observação:** deve ser interpretado em relação ao cronograma físico-financeiro.
+
+### 2.6. Avanço financeiro
+Informação sobre valores executados, medidos, pagos ou previstos.
+
+**Observação:** o relatório pode registrar esse dado de forma sintética, sem substituir o boletim de medição.
+
+### 2.7. Pendências
+Itens que impedem, atrasam ou comprometem a execução.
+
+**Exemplos:**
+- falta de material;
+- interferência de terceiros;
+- pendência de projeto;
+- pendência de liberação de área;
+- pendência de aprovação.
+
+### 2.8. Riscos
+Eventos ou condições que podem afetar prazo, custo, qualidade ou continuidade da obra.
+
+### 2.9. Evidências
+Registros que comprovam a situação informada.
+
+**Exemplos:**
+- fotos;
+- documentos anexos;
+- registros de visita;
+- relatórios técnicos;
+- medições.
+
+### 2.10. Providências
+Ações recomendadas ou adotadas para tratar pendências, riscos ou desvios.
+
+### 2.11. Responsáveis
+Pessoas ou unidades envolvidas na elaboração, revisão, aprovação ou execução das providências.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário. A lista pode ser ajustada conforme o nível de formalização desejado pelo órgão.
+
+### 3.1. Identificação do relatório
+- número do relatório;
+- título;
+- obra vinculada;
+- contrato vinculado;
+- período de referência;
+- data de emissão;
+- unidade/órgão responsável;
+- responsável pelo preenchimento.
+
+### 3.2. Identificação da obra
+- nome da obra;
+- código interno da obra;
+- localidade;
+- empresa contratada;
+- fiscal ou equipe de acompanhamento;
+- gestor responsável.
+
+### 3.3. Situação geral
+- status da obra;
+- percentual de avanço físico;
+- percentual de avanço financeiro, se aplicável;
+- comparação com o cronograma previsto;
+- classificação da situação: normal, atenção, crítica.
+
+### 3.4. Descrição do andamento
+- resumo textual do período;
+- atividades executadas;
+- frentes de serviço em andamento;
+- principais entregas do período.
+
+### 3.5. Desvios e ocorrências
+- atraso identificado;
+- causa do atraso;
+- impacto estimado;
+- ocorrências relevantes;
+- interrupções ou paralisações;
+- não conformidades observadas.
+
+### 3.6. Pendências
+- lista de pendências;
+- origem da pendência;
+- responsável pela solução;
+- prazo estimado para tratamento;
+- status da pendência.
+
+### 3.7. Riscos
+- risco identificado;
+- probabilidade;
+- impacto;
+- nível de criticidade;
+- medida preventiva ou corretiva.
+
+### 3.8. Evidências
+- anexos;
+- fotos;
+- documentos de apoio;
+- data da coleta;
+- descrição da evidência.
+
+### 3.9. Relação com medições e cronograma
+- boletim de medição relacionado, se houver;
+- referência ao cronograma físico-financeiro;
+- observação sobre aderência ao planejamento.
+
+### 3.10. Conclusão e encaminhamentos
+- conclusão do acompanhamento no período;
+- providências recomendadas;
+- encaminhamentos para áreas responsáveis;
+- necessidade de reavaliação em período seguinte.
+
+### 3.11. Assinaturas ou validações
+- elaborador;
+- revisor;
+- aprovador;
+- data de validação.
+
+---
+
+## 4. Regras de negócio
+
+As regras abaixo definem o comportamento esperado do formulário.
+
+### 4.1. Regra de vinculação obrigatória
+Todo relatório deve estar vinculado a:
+- uma obra existente;
+- um contrato válido ou identificado como referência;
+- um período de acompanhamento.
+
+**Critério:** não deve ser permitido salvar relatório sem essa vinculação.
+
+### 4.2. Regra de unicidade por período
+Deve existir, para a mesma obra, **no máximo um relatório por período de referência**, salvo se o processo permitir versões ou complementações formalmente controladas.
+
+**Ponto a validar com especialista:** se o sistema aceitar:
+- apenas um relatório final por período;
+- rascunhos;
+- versões revisadas;
+- relatórios complementares.
+
+### 4.3. Regra de consistência temporal
+A data final do período deve ser igual ou posterior à data inicial.
+
+A data de emissão não deve ser anterior ao período informado, salvo se houver regra específica de pré-registro.
+
+### 4.4. Regra de aderência ao contrato
+O relatório deve considerar apenas obras e informações compatíveis com o contrato vinculado.
+
+**Exemplo de consistência:**
+- obra informada no relatório deve corresponder ao objeto contratado;
+- empresa contratada deve ser a mesma do contrato.
+
+### 4.5. Regra de aderência ao cronograma
+O avanço físico informado deve ser comparável ao cronograma físico-financeiro.
+
+Se houver desvio relevante entre o executado e o previsto, o relatório deve exigir justificativa.
+
+**Ponto a validar com especialista:** definição de “desvio relevante” em percentual ou critério qualitativo.
+
+### 4.6. Regra de situação da obra
+A situação geral da obra deve ser selecionada a partir de uma lista controlada.
+
+Não deve haver texto livre para o status principal, para evitar inconsistência de classificação.
+
+### 4.7. Regra de obrigatoriedade de justificativa
+Quando a obra estiver:
+- atrasada;
+- paralisada;
+- suspensa;
+- com risco crítico;
+- com pendência impeditiva;
+
+o sistema deve exigir justificativa detalhada e, quando aplicável, plano de ação.
+
+### 4.8. Regra de pendências
+Toda pendência registrada deve possuir, no mínimo:
+- descrição;
+- origem;
+- responsável;
+- prazo estimado ou condição de resolução;
+- status.
+
+Pendências sem responsável ou sem descrição não devem ser aceitas.
+
+### 4.9. Regra de riscos
+Todo risco classificado como alto ou crítico deve exigir:
+- descrição;
+- impacto;
+- medida de mitigação;
+- responsável pelo acompanhamento.
+
+### 4.10. Regra de evidências
+Quando o relatório registrar ocorrência relevante, atraso, não conformidade ou paralisação, deve haver ao menos uma evidência associada, se o processo exigir comprovação documental.
+
+**Ponto a validar com especialista:** quais eventos exigem evidência obrigatória.
+
+### 4.11. Regra de encaminhamento
+Se o relatório indicar pendência ou risco com impacto no prazo, o sistema deve permitir registrar encaminhamento para área responsável.
+
+### 4.12. Regra de fechamento do período
+O relatório deve consolidar a situação ao final do período de referência, não apenas eventos isolados.
+
+Ou seja, o conteúdo deve refletir:
+- o que ocorreu no período;
+- o efeito acumulado na obra;
+- a situação atual ao término do período.
+
+### 4.13. Regra de rastreabilidade
+Toda informação crítica deve ser rastreável até sua origem, como:
+- boletim de medição;
+- relatório diário de obras;
+- visita técnica;
+- documento anexo;
+- registro de ocorrência.
+
+### 4.14. Regra de aprovação
+O relatório pode exigir fluxo de revisão e aprovação antes de ser considerado oficial.
+
+**Ponto a validar com especialista:** se o processo exige:
+- elaboração;
+- revisão técnica;
+- aprovação gerencial;
+- publicação ou arquivamento.
+
+---
+
+## 5. Validações
+
+As validações abaixo tratam de integridade, formato e coerência dos dados.
+
+### 5.1. Validações obrigatórias
+- obra vinculada;
+- contrato vinculado;
+- período inicial e final;
+- status da obra;
+- resumo do andamento;
+- responsável pelo preenchimento.
+
+### 5.2. Validações de formato

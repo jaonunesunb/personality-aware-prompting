@@ -1,0 +1,242 @@
+A seguir está um artefato de requisitos para o **formulário de Relatório de Acompanhamento de Obra**, considerando o contexto de **obras públicas executadas de forma indireta**.
+
+---
+
+## 1. Objetivo do formulário
+
+O formulário de **Relatório de Acompanhamento de Obra** tem como objetivo **registrar, consolidar e acompanhar a situação atual da obra**, permitindo ao órgão público:
+
+- monitorar o andamento físico e financeiro;
+- identificar atrasos, pendências e riscos;
+- registrar ocorrências relevantes;
+- consolidar evidências e informações de apoio;
+- subsidiar decisões de gestão, fiscalização e validação de medições.
+
+### Conceitos importantes
+- **Acompanhamento de obra**: atividade de monitorar a execução da obra ao longo do tempo, comparando o planejado com o realizado.
+- **Obra executada de forma indireta**: a execução é feita por uma empresa contratada, enquanto o órgão público fiscaliza e acompanha.
+- **Relatório consolidado**: documento que reúne informações de diferentes fontes, como medições, diário de obra e cronograma.
+
+---
+
+## 2. Entidades principais
+
+As principais entidades envolvidas no formulário são:
+
+### 2.1 Relatório de Acompanhamento de Obra
+Entidade central do formulário. Representa um registro periódico da situação da obra em uma data ou período.
+
+### 2.2 Obra
+Identifica o empreendimento acompanhado. Pode estar vinculada a um contrato específico.
+
+### 2.3 Contrato
+Documento que formaliza a contratação da empresa executora e define objeto, prazo, valor e condições gerais.
+
+### 2.4 Cronograma Físico-Financeiro
+Documento de planejamento que permite comparar o previsto com o executado.
+
+### 2.5 Boletim de Medição
+Documento que registra os serviços executados em determinado período e pode indicar avanço físico e financeiro.
+
+### 2.6 Relatório Diário de Obras
+Documento diário com registros de atividades, ocorrências, condições climáticas, equipes e evidências.
+
+### 2.7 Pendência
+Item que impede ou dificulta o andamento normal da obra, como falta de material, atraso de projeto, problema de acesso ou necessidade de decisão.
+
+### 2.8 Risco
+Evento ou condição que pode impactar prazo, custo, qualidade ou continuidade da obra.
+
+### 2.9 Evidência
+Arquivo, foto, observação ou documento que comprova a situação registrada.
+
+### 2.10 Responsável pelo relatório
+Servidor ou fiscal que elabora, revisa ou aprova o relatório.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário.
+
+### 3.1 Identificação do relatório
+- Número do relatório
+- Data de emissão
+- Período de referência
+- Status do relatório: rascunho, em revisão, aprovado, rejeitado, encerrado
+- Unidade/órgão responsável
+- Responsável pelo preenchimento
+- Responsável pela validação/aprovação
+
+### 3.2 Identificação da obra
+- Código da obra
+- Nome da obra
+- Localização da obra
+- Número do contrato
+- Empresa contratada
+- Objeto do contrato
+- Data de início prevista
+- Data de término prevista
+- Prazo contratual
+
+### 3.3 Situação geral da obra
+- Percentual físico planejado
+- Percentual físico executado
+- Percentual financeiro planejado
+- Percentual financeiro executado
+- Situação geral: dentro do prazo, em atraso, paralisada, retomada, concluída, suspensa
+- Descrição resumida do andamento
+
+### 3.4 Execução no período
+- Atividades executadas no período
+- Serviços em andamento
+- Serviços concluídos no período
+- Serviços não iniciados
+- Principais frentes de trabalho
+- Quantitativos executados, se aplicável
+
+### 3.5 Pendências e impedimentos
+- Lista de pendências
+- Tipo da pendência
+- Data de identificação
+- Impacto estimado
+- Responsável pela tratativa
+- Prazo para solução
+- Situação da pendência: aberta, em tratamento, resolvida, cancelada
+
+### 3.6 Riscos e ocorrências
+- Lista de riscos identificados
+- Descrição da ocorrência
+- Classificação do risco: baixo, médio, alto
+- Impacto potencial: prazo, custo, qualidade, segurança, escopo
+- Ação recomendada
+- Responsável pela ação
+
+### 3.7 Medições e financeiro
+- Número do boletim de medição relacionado
+- Valor medido no período
+- Valor acumulado medido
+- Valor previsto no período
+- Desvio entre previsto e realizado
+- Observações sobre pagamento, glosa ou retenção, se houver
+
+### 3.8 Evidências
+- Fotos
+- Documentos anexos
+- Relatórios complementares
+- Data das evidências
+- Descrição das evidências
+
+### 3.9 Observações finais
+- Comentários gerais
+- Recomendações
+- Necessidade de providências
+- Encaminhamentos sugeridos
+
+---
+
+## 4. Regras de negócio
+
+### 4.1 Periodicidade do relatório
+- O relatório deve ser emitido em periodicidade definida pelo órgão, como semanal, quinzenal ou mensal.
+- A periodicidade deve ser consistente com a rotina de fiscalização da obra.
+
+### 4.2 Vinculação obrigatória à obra
+- Todo relatório deve estar vinculado a uma única obra.
+- Uma obra pode ter vários relatórios ao longo do tempo.
+
+### 4.3 Consolidação de informações
+- O relatório deve consolidar informações de pelo menos uma fonte de acompanhamento, como diário de obra, medição ou cronograma.
+- Quando houver divergência entre fontes, a divergência deve ser registrada no relatório.
+
+### 4.4 Comparação entre planejado e realizado
+- O formulário deve permitir comparar o avanço planejado com o avanço executado.
+- Se o executado estiver abaixo do planejado, o sistema deve permitir registrar justificativa.
+
+### 4.5 Registro de atrasos
+- Quando houver atraso em relação ao cronograma, o relatório deve registrar:
+  - causa provável;
+  - impacto estimado;
+  - ação corretiva proposta;
+  - responsável pela ação.
+
+### 4.6 Registro de paralisação ou suspensão
+- Se a obra estiver paralisada ou suspensa, o relatório deve exigir descrição do motivo e data de início da condição.
+- Deve ser possível indicar se a paralisação afeta prazo, custo ou ambos.
+
+### 4.7 Registro de pendências
+- Toda pendência relevante deve ser registrada com status e responsável.
+- Pendências sem prazo ou sem responsável devem ser sinalizadas como incompletas.
+
+### 4.8 Registro de riscos
+- Riscos identificados devem ser classificados por criticidade.
+- Riscos de alta criticidade devem exigir ação imediata ou plano de mitigação.
+
+### 4.9 Evidências obrigatórias
+- O relatório deve permitir anexar evidências que sustentem as informações registradas.
+- Para ocorrências relevantes, ao menos uma evidência deve ser anexada, quando disponível.
+
+### 4.10 Aprovação do relatório
+- O relatório deve passar por validação antes de ser considerado concluído.
+- O status “aprovado” deve ser reservado para relatórios revisados por responsável autorizado.
+
+### 4.11 Histórico e rastreabilidade
+- Alterações no relatório devem ser registradas com data, usuário e motivo da alteração.
+- O sistema deve preservar histórico de versões, se aplicável.
+
+---
+
+## 5. Validações
+
+### 5.1 Validações de preenchimento
+- Campos obrigatórios não podem ficar em branco.
+- Datas devem ser válidas e coerentes entre si.
+- O período de referência não pode ser posterior à data de emissão.
+
+### 5.2 Validações de consistência temporal
+- A data do relatório deve estar dentro da vigência do contrato, salvo exceção justificada.
+- O período de referência não pode se sobrepor indevidamente a outro relatório do mesmo tipo, se a regra de negócio exigir unicidade por período.
+
+### 5.3 Validações numéricas
+- Percentuais devem estar entre 0% e 100%.
+- Valores financeiros não podem ser negativos.
+- Quantitativos executados não podem ser negativos.
+
+### 5.4 Validações de coerência entre campos
+- Se a situação geral for “concluída”, o percentual físico executado deve ser 100% ou equivalente, conforme critério adotado pelo órgão.
+- Se a situação geral for “paralisada” ou “suspensa”, deve haver justificativa.
+- Se houver atraso informado, deve existir ao menos uma pendência, risco ou justificativa associada.
+
+### 5.5 Validações de vínculo documental
+- Se o relatório mencionar medição, deve haver referência ao boletim de medição correspondente, quando aplicável.
+- Se o relatório mencionar avanço físico, deve haver base de comparação com cronograma ou diário de obra.
+
+### 5.6 Validações de anexos
+- Arquivos anexados devem respeitar formato e tamanho permitidos pelo sistema.
+- Imagens e documentos devem estar associados ao item correspondente, quando possível.
+
+---
+
+## 6. Exceções e alertas
+
+### 6.1 Alertas de atraso
+- Emitir alerta quando o avanço executado estiver abaixo do planejado acima de um limite configurável.
+- O limite deve ser definido pelo órgão, pois pode variar por tipo de obra.
+
+### 6.2 Alertas de paralisação
+- Emitir alerta quando a obra estiver paralisada por mais de determinado período.
+- O prazo de alerta deve ser parametrizável.
+
+### 6.3 Alertas de pendência crítica
+- Emitir alerta para pendências com impacto alto ou prazo vencido.
+- Pendências sem responsável devem ser destacadas.
+
+### 6.4 Alertas de divergência documental
+- Emitir alerta quando houver divergência entre relatório de acompanhamento, boletim de medição e cronograma.
+- Exemplo: medição aprovada sem avanço correspondente no acompanhamento.
+
+### 6.5 Exceções operacionais
+- Caso não haja medição no período, o relatório ainda pode ser emitido, desde que a ausência seja justificada.
+- Caso não haja evidência anexada, o sistema pode permitir salvamento, mas deve sinalizar pendência, dependendo da criticidade do registro.
+
+###

@@ -1,0 +1,231 @@
+A seguir está um artefato de requisitos para o **formulário de Boletim de Medição**, considerando o domínio de acompanhamento de obras públicas executadas de forma indireta.
+
+---
+
+## 1. Objetivo do formulário
+
+O **Boletim de Medição** tem como objetivo **registrar, conferir e validar os serviços executados em um período específico da obra**, com base no que foi efetivamente realizado pela empresa contratada.
+
+Ele serve para:
+
+- consolidar os quantitativos executados no período;
+- comparar o executado com o planejado e com o contratado;
+- apoiar a análise técnica do órgão público;
+- subsidiar a aprovação de pagamento;
+- manter rastreabilidade das medições da obra.
+
+### Conceito importante
+- **Medição**: verificação formal da quantidade de serviço executado em determinado período, normalmente associada a itens da planilha orçamentária.
+- **Boletim de Medição**: documento que registra essa verificação, com dados do período, itens medidos, quantitativos, valores e validações.
+
+---
+
+## 2. Entidades principais
+
+As principais entidades envolvidas no formulário são:
+
+### 2.1 Boletim de Medição
+Entidade principal do formulário. Representa uma medição específica da obra em um período.
+
+### 2.2 Obra
+Objeto principal acompanhado pelo sistema. O boletim sempre deve estar vinculado a uma obra específica.
+
+### 2.3 Contrato
+Documento que define o objeto contratado, prazo, valor e condições gerais. Serve como base para validar limites e vigência.
+
+### 2.4 Planilha Orçamentária Analítica
+Lista os itens contratados, suas quantidades, preços unitários e valores totais. É a base para medir e calcular valores.
+
+### 2.5 Cronograma Físico-Financeiro
+Define o planejamento de execução ao longo do tempo. Permite comparar o previsto com o realizado.
+
+### 2.6 Itens de Medição
+Linhas do boletim que representam os serviços medidos. Cada item normalmente se relaciona a um item da planilha orçamentária.
+
+### 2.7 Responsáveis
+Usuários ou perfis que criam, conferem, aprovam ou validam o boletim.
+
+### 2.8 Evidências
+Arquivos, fotos, relatórios ou registros que comprovam a execução dos serviços.
+
+---
+
+## 3. Campos necessários
+
+Abaixo estão os campos recomendados para o formulário, separados por grupo.
+
+### 3.1 Identificação do boletim
+- Número do boletim
+- Obra vinculada
+- Contrato vinculado
+- Período de medição inicial
+- Período de medição final
+- Data de emissão
+- Situação do boletim  
+  Ex.: rascunho, em conferência, devolvido, aprovado, rejeitado, consolidado
+
+### 3.2 Dados de referência
+- Empresa contratada
+- Fiscal responsável
+- Gestor responsável
+- Unidade/órgão responsável
+- Local da obra
+- Tipo de medição  
+  Ex.: parcial, final, complementar, retificadora
+
+### 3.3 Informações financeiras
+- Valor total contratado
+- Valor acumulado medido anteriormente
+- Valor medido no boletim atual
+- Valor acumulado após este boletim
+- Percentual acumulado executado
+- Saldo contratual disponível
+- Percentual do contrato executado
+
+### 3.4 Itens medidos
+Para cada item:
+- Código do item
+- Descrição do serviço
+- Unidade de medida
+- Quantidade contratada
+- Quantidade prevista no cronograma, se aplicável
+- Quantidade já medida anteriormente
+- Quantidade medida neste boletim
+- Quantidade acumulada
+- Saldo a medir
+- Preço unitário
+- Valor do item neste boletim
+- Observações do item
+- Referência à evidência, se houver
+
+### 3.5 Informações de conferência
+- Responsável pela medição
+- Responsável pela conferência
+- Data da conferência
+- Responsável pela aprovação
+- Data da aprovação
+- Parecer técnico
+- Justificativa de divergências
+- Observações gerais
+
+### 3.6 Anexos e evidências
+- Fotos
+- Relatórios
+- Croquis
+- Memórias de cálculo
+- Outros documentos comprobatórios
+
+---
+
+## 4. Regras de negócio
+
+### 4.1 Vinculação obrigatória
+- O boletim deve estar vinculado a **uma única obra** e a **um único contrato**.
+- O boletim deve referenciar itens existentes na **planilha orçamentária analítica**.
+
+### 4.2 Período de medição
+- O período inicial deve ser anterior ou igual ao período final.
+- O período de medição não pode ser vazio.
+- O período do boletim deve respeitar a vigência do contrato, salvo exceções justificadas e aprovadas.
+
+### 4.3 Integridade dos itens
+- Apenas itens contratados podem ser medidos, salvo se o sistema permitir itens aditivos ou extraordinários, o que deve ser validado com especialista.
+- A quantidade medida de um item não pode ser negativa.
+- A quantidade acumulada medida de um item não pode ultrapassar a quantidade contratada, salvo previsão contratual específica.
+
+### 4.4 Controle de saldo
+- O saldo a medir de cada item deve ser calculado como:
+  - quantidade contratada menos quantidade acumulada medida.
+- O valor do boletim deve ser calculado com base nos itens medidos e seus preços unitários.
+- O valor acumulado medido não pode ultrapassar o valor total contratado, salvo aditivos formalizados.
+
+### 4.5 Coerência com o cronograma
+- O boletim deve permitir comparação entre o executado e o previsto no cronograma físico-financeiro.
+- Caso a medição ultrapasse significativamente o previsto, o sistema deve sinalizar alerta.
+- O boletim não substitui o cronograma, mas deve refletir a execução real.
+
+### 4.6 Validação técnica
+- Todo boletim deve passar por conferência técnica antes da aprovação.
+- A aprovação deve ser feita por usuário com permissão específica.
+- Um boletim aprovado não deve ser alterado diretamente; correções devem ocorrer por retificação ou novo boletim, conforme regra do órgão.
+
+### 4.7 Rastreabilidade
+- Toda alteração relevante deve ser registrada com data, usuário e justificativa.
+- O sistema deve manter histórico das versões do boletim.
+- Itens medidos devem ser rastreáveis até a planilha orçamentária e, quando aplicável, até evidências anexadas.
+
+### 4.8 Situação do boletim
+- Um boletim pode ter estados distintos, por exemplo:
+  - rascunho
+  - em conferência
+  - devolvido para ajuste
+  - aprovado
+  - rejeitado
+  - consolidado
+- A transição entre estados deve seguir fluxo autorizado.
+
+### 4.9 Dependência de documentos
+- O boletim deve considerar informações do contrato, da planilha orçamentária e do cronograma.
+- Se houver inconsistência entre esses documentos, o boletim deve ser bloqueado ou sinalizado, conforme criticidade.
+
+### 4.10 Pagamento
+- O boletim aprovado pode ser base para pagamento, mas o pagamento em si é uma etapa posterior.
+- O sistema deve permitir identificar se o boletim já foi utilizado para faturamento ou liquidação, se esse controle existir.
+
+---
+
+## 5. Validações
+
+### 5.1 Validações de preenchimento
+- Campos obrigatórios não podem ficar em branco.
+- Datas devem ser válidas e coerentes.
+- Valores monetários devem ser numéricos e não negativos.
+- Quantidades devem ser numéricas e compatíveis com a unidade de medida.
+
+### 5.2 Validações de consistência
+- A quantidade medida no período não pode exceder o saldo disponível do item, salvo exceção formal.
+- O valor do item deve ser calculado automaticamente a partir da quantidade medida e do preço unitário.
+- O total do boletim deve ser a soma dos valores dos itens medidos.
+- O acumulado do item deve ser igual à soma das medições anteriores mais a medição atual.
+
+### 5.3 Validações de vínculo
+- O item medido deve existir na planilha orçamentária.
+- O contrato vinculado deve estar ativo ou em condição que permita medição, conforme regra do órgão.
+- A obra deve estar em situação compatível com medição.
+
+### 5.4 Validações de período
+- Não permitir boletim com período fora da vigência contratual, salvo exceção.
+- Não permitir sobreposição indevida com outro boletim já aprovado, se o sistema exigir períodos exclusivos.
+- O período deve ser compatível com a periodicidade adotada pelo órgão.
+
+### 5.5 Validações de permissão
+- Apenas perfis autorizados podem criar, editar, conferir, aprovar ou rejeitar boletins.
+- Usuários sem permissão não podem alterar valores ou aprovar medições.
+
+### 5.6 Validações de anexos
+- Evidências obrigatórias, quando exigidas, devem estar anexadas antes da aprovação.
+- Arquivos devem respeitar formato e tamanho permitidos pelo sistema.
+
+---
+
+## 6. Exceções e alertas
+
+### 6.1 Exceções
+- Medição de item não previsto originalmente, se houver aditivo, contrato complementar ou autorização formal.
+- Medição acima do saldo contratual, se houver justificativa e instrumento formal que permita.
+- Boletim fora do período contratual, se houver prorrogação ou autorização registrada.
+- Retificação de boletim já aprovado, se o processo do órgão permitir.
+
+### 6.2 Alertas
+- Quantidade medida muito acima do previsto no cronograma.
+- Divergência entre medição e evidências anexadas.
+- Item com saldo insuficiente para a quantidade informada.
+- Boletim com período sobreposto a outro boletim.
+- Valor acumulado próximo do limite contratual.
+- Ausência de conferência ou aprovação.
+- Inconsistência entre relatório diário de obras e boletim de medição.
+
+### 6.3 Situações que exigem confirmação do especialista
+- Se o sistema deve permitir medição de itens aditivos.
+- Se boletins podem ser retificados ou apenas cancelados e refeitos.
+- Se a medição pode ocorrer por etapa, frente

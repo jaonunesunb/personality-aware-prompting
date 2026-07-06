@@ -1,10 +1,13 @@
 ﻿from openai import OpenAI
+from dotenv import load_dotenv
 from pathlib import Path
 from datetime import datetime
 import os
 import json
 import time
 import argparse
+
+load_dotenv()
 
 MODEL = os.getenv("OPENAI_MODEL", "gpt-5.5")
 TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.2"))
@@ -305,3 +308,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
