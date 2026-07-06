@@ -69,3 +69,24 @@ EXPERIMENTO_ESI_LLM/
 └── outputs/
     ├── prompts_enviados/
     └── respostas_llm/
+## Methodological documentation
+
+Additional methodological details are available in:
+
+- [`docs/protocol_summary.md`](docs/protocol_summary.md)
+- [`docs/prompt_strategy.md`](docs/prompt_strategy.md)
+- [`docs/scoring_summary.md`](docs/scoring_summary.md)
+- [`docs/results_summary.md`](docs/results_summary.md)
+- [`docs/execution_and_reproducibility.md`](docs/execution_and_reproducibility.md)
+- [`docs/contamination_control.md`](docs/contamination_control.md)
+
+
+## Methodological documentation
+
+Additional methodological details are available in:
+
+- [`docs/protocol_summary.md`](docs/protocol_summary.md)
+- [`docs/prompt_strategy.md`](docs/prompt_strategy.md)
+- [`docs/instruments_summary.md`](docs/instruments_summary.md)
+- [`docs/results_summary.md`](docs/results_summary.md)
+- [`docs/execution_and_contamination_control.md`](docs/execution_and_contamination_control.md)

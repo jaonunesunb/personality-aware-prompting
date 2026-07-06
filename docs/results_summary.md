@@ -4,11 +4,12 @@ This pilot study evaluated LLM-mediated domain learning in Requirements Engineer
 
 ## Corrected descriptive results
 
-- K0 average: 50.00%
-- K1 average: approximately 93.47%
-- Condition A: 93.20%
-- Condition B: 93.74%
-- Difference between B and A: +0.54 percentage points
+- K0 average: 31.82%
+- K1 average: 93.47%
+- Learning gain: +61.65 percentage points
+- Condition A: 93.18%
+- Condition B: 93.75%
+- Difference between B and A: +0.57 percentage points
 
 ## Interpretation
 
