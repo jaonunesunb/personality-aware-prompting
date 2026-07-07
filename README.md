@@ -62,6 +62,7 @@ personality-aware-prompting/
 │   ├── instruments_summary.md
 │   ├── scoring_summary.md
 │   ├── results_summary.md
+│   ├── test_instruments_sanitized.md
 │   └── execution_and_contamination_control.md
 │
 └── outputs/
@@ -89,6 +90,7 @@ Additional methodological details are available in:
 - [`docs/instruments_summary.md`](docs/instruments_summary.md)
 - [`docs/scoring_summary.md`](docs/scoring_summary.md)
 - [`docs/results_summary.md`](docs/results_summary.md)
+- [`docs/test_instruments_sanitized.md`](docs/test_instruments_sanitized.md)
 - [`docs/execution_and_contamination_control.md`](docs/execution_and_contamination_control.md)
 
 ## Experimental design
