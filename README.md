@@ -58,8 +58,8 @@ personality-aware-prompting/
 │
 ├── docs/
 │   ├── protocol_summary.md
-│   ├── prompt_strategy.md
 │   ├── instruments_summary.md
+│   ├── Profile_to_Didactic_Strategy_Mapping
 │   ├── scoring_summary.md
 │   ├── results_summary.md
 │   ├── test_instruments_sanitized.md
@@ -86,7 +86,7 @@ The repository includes:
 Additional methodological details are available in:
 
 - [`docs/protocol_summary.md`](docs/protocol_summary.md)
-- [`docs/prompt_strategy.md`](docs/prompt_strategy.md)
+- [`docs/Profile_to_Didactic_Strategy_Mapping.md`](docs/Profile_to_Didactic_Strategy_Mapping.md)
 - [`docs/instruments_summary.md`](docs/instruments_summary.md)
 - [`docs/scoring_summary.md`](docs/scoring_summary.md)
 - [`docs/results_summary.md`](docs/results_summary.md)
